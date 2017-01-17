@@ -71,7 +71,7 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 
 .select { border-bottom: 1px solid #d51819; font-size: 16px; position: relative; }
 
-.select .selectes { width: 192px; height: 44px; background-color: #d51819; color: #fff; line-height: 44px; padding-left: 48px; position: relative; }
+.select .selectes { width: 188px; height: 44px; background-color: #d51819; color: #fff; line-height: 44px; padding-left: 48px; position: relative; }
 
 .select .selectes em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0 -346px; display: block; width: 18px; height: 15px; position: absolute; top: 16px; left: 16px; }
 
@@ -88,6 +88,8 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 .select .index span.new { left: 350px; }
 
 .select .index span.hongbao { left: 460px; }
+
+.select .index span.secondHot { left: 590px; }
 
 .container .select_all { border: 1px solid #d51819; width: 234px; }
 
