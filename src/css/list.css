@@ -132,5 +132,3 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 .slideBar .visited { background: url(img/online_service.png); width: 55px; height: 55px; position: fixed; right: 0; top: 610px; }
 
 .slideBar .top { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat -14px -1064px; display: block; width: 28px; height: 80px; position: fixed; right: 15px; top: 500px; }
-
-body { color: #ccc; }
