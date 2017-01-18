@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select { margin: 0; padding: 0; }
 
-em { font-style: narmal; }
+em { font-style: normal; }
 
 li { list-style: none; }
 
@@ -132,3 +132,35 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 .slideBar .visited { background: url(img/online_service.png); width: 55px; height: 55px; position: fixed; right: 0; top: 610px; }
 
 .slideBar .top { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat -14px -1064px; display: block; width: 28px; height: 80px; position: fixed; right: 15px; top: 500px; }
+
+body { color: #000; font-size: 12px; }
+
+a { color: #000; }
+
+.list_title { margin: 15px 0; }
+
+.list_title p { position: relative; }
+
+.list_title p a { color: #000; }
+
+.list_title p span { padding: 0 4px; }
+
+.list_title p input { width: 132px; height: 25px; margin-left: 12px; padding-left: 4px; border: 1px solid #ccc; }
+
+.list_title p em { display: inline-block; background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0 -372px; width: 18px; height: 18px; position: absolute; top: 5px; left: 241px; }
+
+.classify .classify_left { width: 180px; }
+
+.classify .classify_left p { font-size: 14px; font-weight: bold; padding-bottom: 10px; border-bottom: 1px solid #000; }
+
+.classify .classify_left ul li { position: relative; padding-left: 16px; padding-top: 10px; }
+
+.classify .classify_left ul li em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat -10px -93px; width: 4px; height: 7px; position: absolute; left: 3px; top: 14px; }
+
+.classify .classify_right { width: 980px; margin-left: 38px; }
+
+.classify .classify_right .classifyTop { height: 35px; line-height: 35px; background-color: #f7f7f7; border: 1px solid #ccc; }
+
+.classify .classify_right .classifyTop .classifies ul li span { padding: 10px; }
+
+.classify .classify_right .classifyTop .classifies ul li a { padding-right: 22px; }

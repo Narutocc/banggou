@@ -2,3 +2,102 @@
 @import 'common';
 @import 'public';
 
+$listColor:#000;
+$listFontSize:12px;
+
+body{
+	color:$listColor;
+	font-size:$listFontSize;
+}
+a{
+	color:$listColor;
+}
+
+
+//搜索框
+.list_title{
+	margin:15px 0;
+	p{
+		position:relative;
+		a{
+			color:$listColor;
+		}
+		span{
+			padding:0 4px;
+		}
+		input{
+			width:132px;
+			height:25px;
+			margin-left:12px;
+			padding-left:4px;
+			border:1px solid #ccc;
+		}
+		em{
+			display:inline-block;
+			background:url(img/Veo_mbshop_spirit_pic.png) no-repeat 0 -372px;
+			width:18px;
+			height:18px;
+			position:absolute;
+			top:5px;
+			left:241px;
+		}
+	}
+}
+
+
+//分类
+.classify{
+	//左边
+	.classify_left{
+		width:180px;
+		p{
+			font-size:14px;
+			font-weight:bold;
+			padding-bottom:10px;
+			border-bottom:1px solid #000;
+
+		}
+		ul{
+			li{
+				position:relative;
+				padding-left:16px;
+				padding-top:10px;
+				em{
+					background:url(img/Veo_mbshop_spirit_pic.png) no-repeat -10px -93px;
+					width:4px;
+					height:7px;
+					position:absolute;
+					left:3px;
+					top:14px;
+				}
+			}
+		}
+	}
+
+	//右边
+	.classify_right{
+		width:980px;
+		margin-left:38px;
+		.classifyTop{
+			height:35px;
+			line-height:35px;
+			background-color:#f7f7f7;
+			border:1px solid #ccc;
+			.classifyTitle{
+
+			}
+			.classifies{
+				ul{
+					li{
+						span{
+							padding:10px;
+						}
+						a{
+							padding-right:22px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

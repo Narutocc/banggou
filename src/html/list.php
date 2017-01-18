@@ -4,7 +4,7 @@
         $servername = "localhost";//
         $username = "root";
         $password = "root";
-        $dbname = '1000phone'; 
+        $dbname = 'goods'; 
         //初始化连接，返回一个连接对象(包含所连接数据库的信息)
         $con = mysqli_connect($servername,$username,$password,$dbname); 
 
@@ -47,4 +47,9 @@
         mysqli_close($conn);   
         return $jsonData;
     }
+
+
+    $sql = "select * from goodsdatalist";
+    $result = query($sql);
+    echo json_encode($result,JSON_UNESCAPED_UNICODE);
 ?>
