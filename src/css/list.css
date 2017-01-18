@@ -161,6 +161,10 @@ a { color: #000; }
 
 .classify .classify_right .classifyTop { height: 35px; line-height: 35px; background-color: #f7f7f7; border: 1px solid #ccc; }
 
+.classify .classify_right .classifyTop .classifyTitle a { padding: 10px; }
+
+.classify .classify_right .classifyTop .classifyTitle span { padding: 14px; }
+
 .classify .classify_right .classifyTop .classifies ul li span { padding: 10px; }
 
 .classify .classify_right .classifyTop .classifies ul li a { padding-right: 22px; }
