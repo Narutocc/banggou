@@ -49,6 +49,7 @@
     }
 
 
+   // $sql = "select * from goodsdatalist limit 0,40";
     $sql = "select * from goodsdatalist";
     $result = query($sql);
     echo json_encode($result,JSON_UNESCAPED_UNICODE);

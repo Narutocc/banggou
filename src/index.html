@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>首页-banggo.com 邦购网 | 美特斯邦威官方商城-Me&amp;City官方商城，100%正品保证!</title>
 	<link rel="stylesheet" href="css/index.css">
+	<script src="assert/jquery-3.1.1.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<!-- 头部导航 -->
@@ -12,7 +15,7 @@
 		<div class="wrapper clear">
 			<p class="left">欢迎来到邦购网，全场满199元包邮</p>
 			<ul class="firstMenu right">
-				<li class="fm"><a href="#">登录</a>
+				<li class="fm"><a href="#">登录<i></i></a>
 					<ul class="secondMenu">
 						<li><a href="#">QQ账户登录</a></li>
 						<li><a href="#">支付宝登录</a></li>
@@ -20,7 +23,7 @@
 					</ul>
 				</li>
 				<li><a href="#">注册</a></li>
-				<li class="fm"><a href="#">我的邦购</a><em></em>
+				<li class="fm"><a href="#">我的邦购<i class="my"></i></a><em></em>
 					<ul class="secondMenu">
 						<li><a href="#">我的订单</a></li>
 						<li><a href="#">我的积分</a></li>
@@ -30,13 +33,13 @@
 				</li>
 				<li><a href="#">会员中心</a></li>
 				<li  class="fm _download"><img src="css/img/Iphone-vertical.png" alt="手机装饰图"><a href="#">下载APP</a><em></em>
-					<ul class="secondMenu">
+					<ul class="secondMenu app">
 						<li><img src="img/mbshop_pic_mobile.png" alt="下载APP二维码"></li>
 					</ul>
 				</li>
 				<li><a href="#">微博</a></li>
 				<li  class="fm"><a href="#">微信</a>
-					<ul class="secondMenu">
+					<ul class="secondMenu weixin">
 						<li><img src="img/mbshop_pic_erweima.jpg" alt="微信二维码"></li>
 					</ul>
 				</li>
@@ -86,7 +89,6 @@
 	<div class="container">
 		<div class="wrapper clear">
 			<!-- 菜单栏，一二级菜单 -->
-			<!-- 缺少二级菜单，还没做 -->
 			<div class="select_all left">
 				<div class="menu">
 					<div class="clear">
@@ -101,6 +103,75 @@
 						<li><a href="#">雪地靴</a></li>
 						<li><a href="#">爆款热卖</a></li>
 					</ul>
+
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>男生热门</h4>
+								<div class="hotList clear">
+									<a href="#">冬新品</a>
+									<a href="#">新品夹克</a>
+									<a href="#">军装夹克</a>
+									<a href="#">衬衫</a>
+									<a href="#">慢跑裤</a>
+									<a href="#">百搭休闲裤</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>女生热门</h4>
+								<div class="hotList clear">
+									<a href="#">冬新品</a>
+									<a href="#">商场同款</a>
+									<a href="#">风衣</a>
+									<a href="#">夹克</a>
+									<a href="#">裙装</a>
+									<a href="#">背带裙/背带裤</a>
+									<a href="#">阔脚裤</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>儿童热门</h4>
+								<div class="hotList clear">
+									<a href="#">棉服</a>
+									<a href="#">羽绒服</a>
+									<a href="#">毛衣</a>
+									<a href="#">裤子</a>
+									<a href="#">外套</a>
+									<a href="#">套装</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>生活热门</h4>
+								<div class="hotList clear">
+									<a href="#">随行杯</a>
+									<a href="#">取暖小件</a>
+									<a href="#">创意礼品</a>
+									<a href="#">面膜</a>
+									<a href="#">护肤套装</a>
+									<a href="#">礼盒</a>
+									<a href="#">家居鞋/拖鞋</a>
+									<a href="#">披毯/盖毯</a>
+									<a href="#">保温杯</a>
+								</div>		
+							</div>		
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji1.jpg" alt="二级菜单图片">
+							<p>当季流行热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji1.1.jpg" alt="品牌1"></a>
+								<a href="#"><img src="img/erji1.2.png" alt="品牌2"></a>
+								<a href="#"><img src="img/erji1.3.jpg" alt="品牌3"></a>
+								<a href="#"><img src="img/erji1.4.jpg" alt="品牌4"></a>
+								<a href="#"><img src="img/erji1.5.jpg" alt="品牌5"></a>
+								<a href="#"><img src="img/erji1.6.png" alt="品牌6"></a>
+								<a href="#"><img src="img/erji1.7.png" alt="品牌7"></a>
+								<a href="#"><img src="img/erji1.8.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -117,6 +188,61 @@
 						<li><a href="#">卫衣</a></li>
 						<li><a href="#" class="active">3折封顶</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="menClothes"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>上装</h4>
+								<div class="hotList clear">
+									<a href="#">羽绒服</a>
+									<a href="#">呢大衣</a>
+									<a href="#">毛织背心</a>
+									<a href="#">皮衣</a>
+									<a href="#">夹克</a>
+									<a href="#">毛衣</a>
+									<a href="#">长袖T恤</a>
+									<a href="#">卫衣</a>
+									<a href="#">长袖衬衫</a>
+									<a href="#">西装</a>
+									<a href="#">套头卫衣</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>下装</h4>
+								<div class="hotList clear">
+									<a href="#">牛仔长裤</a>
+									<a href="#">休闲长裤</a>
+									<a href="#">西裤</a>
+									<a href="#">运动长裤</a>
+									<a href="#">针织长裤</a>
+									<a href="#">中短裤</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>内衣</h4>
+								<div class="hotList clear">
+									<a href="#">背心</a>
+									<a href="#">内衣裤装</a>
+									<a href="#">家居服</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji2.jpg" alt="二级菜单图片">
+							<p>男装热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji2.1.png" alt="品牌1"></a>
+								<a href="#"><img src="img/erji2.2.jpg" alt="品牌2"></a>
+								<a href="#"><img src="img/erji2.3.png" alt="品牌3"></a>
+								<a href="#"><img src="img/erji2.4.png" alt="品牌4"></a>
+								<a href="#"><img src="img/erji2.5.jpg" alt="品牌5"></a>
+								<a href="#"><img src="img/erji2.6.jpg" alt="品牌6"></a>
+								<a href="#"><img src="img/erji2.7.png" alt="品牌7"></a>
+								<a href="#"><img src="img/erji2.8.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -134,6 +260,74 @@
 						<li><a href="#">裙装</a></li>
 						<li><a href="#">冬家居服</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="womenClothes"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>上装</h4>
+								<div class="hotList clear">
+									<a href="#">羽绒服</a>
+									<a href="#">风衣</a>
+									<a href="#">棉服</a>
+									<a href="#">夹克</a>
+									<a href="#">外套</a>
+									<a href="#">毛衣</a>
+									<a href="#">长袖衬衫</a>
+									<a href="#">大衣</a>
+									<a href="#">毛衣</a>
+									<a href="#">马甲</a>
+									<a href="#">T恤</a>
+									<a href="#">卫衣</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>下装</h4>
+								<div class="hotList clear">
+									<a href="#">牛仔裤</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">连身裤</a>
+									<a href="#">阔脚裤</a>
+									<a href="#">短裤</a>
+									<a href="#">针织休闲裤</a>
+									<a href="#">西裤</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>裙装</h4>
+								<div class="hotList clear">
+									<a href="#">连衣裙</a>
+									<a href="#">半身裙</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>内衣</h4>
+								<div class="hotList clear">
+									<a href="#">吊带</a>
+									<a href="#">内衣裤装</a>
+									<a href="#">家居套装</a>
+									<a href="#">文胸</a>
+									<a href="#">袜子</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji3.jpg" alt="二级菜单图片">
+							<p>女装热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji3.1.jpg" alt="品牌1"></a>
+								<a href="#"><img src="img/erji3.2.png" alt="品牌2"></a>
+								<a href="#"><img src="img/erji3.3.jpg" alt="品牌3"></a>
+								<a href="#"><img src="img/erji3.4.jpg" alt="品牌4"></a>
+								<a href="#"><img src="img/erji3.5.jpg" alt="品牌5"></a>
+								<a href="#"><img src="img/erji3.6.jpg" alt="品牌6"></a>
+								<a href="#"><img src="img/erji3.7.png" alt="品牌7"></a>
+								<a href="#"><img src="img/erji3.8.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -149,6 +343,67 @@
 						<li><a href="#">童鞋</a></li>
 						<li><a href="#" class="active">童包配</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="childrenClothes"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>上装</h4>
+								<div class="hotList clear">
+									<a href="#">羽绒服</a>
+									<a href="#">套头毛衣</a>
+									<a href="#">夹克</a>
+									<a href="#">长袖T恤</a>
+									<a href="#">衬衫</a>
+									<a href="#">套头卫衣</a>
+									<a href="#">外套</a>
+									<a href="#">棉服</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>下装</h4>
+								<div class="hotList clear">
+									<a href="#">针织裤</a>
+									<a href="#">背带裤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">打底裤</a>
+									<a href="#">半身裙</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>连身</h4>
+								<div class="hotList clear">
+									<a href="#">连衣裙</a>
+									<a href="#">卫衣套装</a>
+									<a href="#">背带裤</a>
+									<a href="#">T恤套装</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>搭配</h4>
+								<div class="hotList clear">
+									<a href="#">童鞋</a>
+									<a href="#">童包</a>
+									<a href="#">童配饰</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji4.jpg" alt="二级菜单图片">
+							<p>童装热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji4.1.jpg" alt="品牌1"></a>
+								<a href="#"><img src="img/erji4.2.jpg" alt="品牌2"></a>
+								<a href="#"><img src="img/erji4.3.jpg" alt="品牌3"></a>
+								<a href="#"><img src="img/erji4.4.jpg" alt="品牌4"></a>
+								<a href="#"><img src="img/erji4.5.jpg" alt="品牌5"></a>
+								<a href="#"><img src="img/erji4.6.jpg" alt="品牌6"></a>
+								<a href="#"><img src="img/erji4.7.jpg" alt="品牌7"></a>
+								<a href="#"><img src="img/erji4.6.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -164,6 +419,69 @@
 						<li><a href="#">篮球鞋</a></li>
 						<li><a href="#" class="active">匡威</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="shoes"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>人气男鞋</h4>
+								<div class="hotList clear">
+									<a href="#">休闲鞋</a>
+									<a href="#">运动鞋</a>
+									<a href="#">商务鞋</a>
+									<a href="#">时装鞋</a>
+									<a href="#">硫化鞋</a>
+									<a href="#">帆布鞋</a>
+									<a href="#">跑步鞋</a>
+									<a href="#">滑板鞋</a>
+									<a href="#">篮球鞋</a>
+									<a href="#">凉拖凉鞋</a>
+									<a href="#">训练鞋</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>人气女鞋</h4>
+								<div class="hotList clear">
+									<a href="#">帆布鞋</a>
+									<a href="#">休闲鞋</a>
+									<a href="#">运动鞋</a>
+									<a href="#">凉拖凉鞋</a>
+									<a href="#">潮靴</a>
+									<a href="#">滑板鞋</a>
+									<a href="#">商务鞋</a>
+									<a href="#">训练鞋</a>
+									<a href="#">篮球鞋</a>
+									<a href="#">时装鞋</a>
+									<a href="#">跑步鞋</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>潮流中性</h4>
+								<div class="hotList clear">
+									<a href="#">运动鞋</a>
+									<a href="#">休闲鞋</a>
+									<a href="#">帆布鞋</a>
+									<a href="#">凉鞋</a>
+									<a href="#">滑板鞋</a>
+									<a href="#">单鞋</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji5.jpg" alt="二级菜单图片">
+							<p>鞋热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji5.1.jpg" alt="品牌1"></a>
+								<a href="#"><img src="img/erji5.2.jpg" alt="品牌2"></a>
+								<a href="#"><img src="img/erji5.3.jpg" alt="品牌3"></a>
+								<a href="#"><img src="img/erji5.4.jpg" alt="品牌4"></a>
+								<a href="#"><img src="img/erji5.5.jpg" alt="品牌5"></a>
+								<a href="#"><img src="img/erji5.6.jpg" alt="品牌6"></a>
+								<a href="#"><img src="img/erji5.7.jpg" alt="品牌7"></a>
+								<a href="#"><img src="img/erji5.8.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -177,6 +495,74 @@
 						<li><a href="#">围巾</a></li>
 						<li><a href="#">手套</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="bag"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>品质男包</h4>
+								<div class="hotList clear">
+									<a href="#">双肩包</a>
+									<a href="#">斜挎包</a>
+									<a href="#">书包</a>
+									<a href="#">钱包</a>
+									<a href="#">拉杆箱</a>
+									<a href="#">胸包</a>
+									<a href="#">手提包</a>
+									<a href="#">单肩包</a>
+									<a href="#">腰包</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>潮流女包</h4>
+								<div class="hotList clear">
+									<a href="#">书包</a>
+									<a href="#">双肩包</a>
+									<a href="#">手提包</a>
+									<a href="#">斜挎包</a>
+									<a href="#">手拿包</a>
+									<a href="#">单肩包</a>
+									<a href="#">钱包/卡包</a>
+									<a href="#">拉杆箱</a>
+									<a href="#">化妆包</a>
+									<a href="#">收纳包</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>时尚配饰</h4>
+								<div class="hotList clear">
+									<a href="#">皮带</a>
+									<a href="#">围巾</a>
+									<a href="#">钥匙扣</a>
+									<a href="#">眼镜</a>
+									<a href="#">包挂饰</a>
+									<a href="#">发圈</a>
+									<a href="#">手链/手镯</a>
+									<a href="#">帽子</a>
+									<a href="#">腕表</a>
+									<a href="#">吊坠/项链</a>
+									<a href="#">戒指</a>
+									<a href="#">耳饰</a>
+									<a href="#">发箍发饰</a>
+									<a href="#">手套</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji6.jpg" alt="二级菜单图片">
+							<p>箱包热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji6.1.jpg" alt="品牌1"></a>
+								<a href="#"><img src="img/erji6.2.jpg" alt="品牌2"></a>
+								<a href="#"><img src="img/erji6.3.jpg" alt="品牌3"></a>
+								<a href="#"><img src="img/erji6.4.jpg" alt="品牌4"></a>
+								<a href="#"><img src="img/erji6.5.jpg" alt="品牌5"></a>
+								<a href="#"><img src="img/erji6.6.jpg" alt="品牌6"></a>
+								<a href="#"><img src="img/erji6.7.jpg" alt="品牌7"></a>
+								<a href="#"><img src="img/erji6.8.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -189,6 +575,57 @@
 						<li><a href="#" class="active">保暖内衣</a></li>
 						<li><a href="#">家具鞋</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="life"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>美妆个护</h4>
+								<div class="hotList clear">
+									<a href="#">乳液/面霜</a>
+									<a href="#">化妆水</a>
+									<a href="#">洁面</a>
+									<a href="#">面膜</a>
+									<a href="#">底妆</a>
+									<a href="#">礼盒</a>
+									<a href="#">优惠套装</a>
+									<a href="#">精华</a>
+									<a href="#">洗发护发</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>生活</h4>
+								<div class="hotList clear">
+									<a href="#">创意礼品</a>
+									<a href="#">床上纺织品</a>
+									<a href="#">随行杯</a>
+									<a href="#">耳机/耳麦</a>
+									<a href="#">保温杯</a>
+									<a href="#">椅垫/沙发垫</a>
+									<a href="#">披毯/盖毯</a>
+									<a href="#">移动电源</a>
+									<a href="#">枕芯/被芯</a>
+									<a href="#">家居鞋/拖鞋</a>
+									<a href="#">面膜</a>
+									<a href="#">底妆</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji7.jpg" alt="二级菜单图片">
+							<p>生活热门品牌</p>
+							<div class="pinpai clear">
+								<a href="#"><img src="img/erji7.1.png" alt="品牌1"></a>
+								<a href="#"><img src="img/erji7.2.png" alt="品牌2"></a>
+								<a href="#"><img src="img/erji7.3.png" alt="品牌3"></a>
+								<a href="#"><img src="img/erji7.4.jpg" alt="品牌4"></a>
+								<a href="#"><img src="img/erji7.5.png" alt="品牌5"></a>
+								<a href="#"><img src="img/erji7.6.jpg" alt="品牌6"></a>
+								<a href="#"><img src="img/erji7.7.png" alt="品牌7"></a>
+								<a href="#"><img src="img/erji7.8.jpg" alt="品牌8"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu">
 					<div class="clear">
@@ -201,26 +638,84 @@
 						<li><a href="#">3折区</a></li>
 						<li><a href="#" class="active">69元封顶</a></li>
 					</ul>
+					<!-- 二级菜单 -->
+					<div class="subMenu clear">
+						<em class="discount"></em>
+						<div class="submenu_left left">
+							<div class="hot">
+								<h4>一折区</h4>
+								<div class="hotList clear">
+									<a href="#">男生</a>
+									<a href="#">女生</a>
+									<a href="#">童装</a>
+									<a href="#">鞋履</a>
+									<a href="#">箱包</a>
+									<a href="#">配饰</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>二折区</h4>
+								<div class="hotList clear">
+									<a href="#">男生</a>
+									<a href="#">女生</a>
+									<a href="#">童装</a>
+									<a href="#">鞋履</a>
+									<a href="#">箱包</a>
+									<a href="#">配饰</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>三折区</h4>
+								<div class="hotList clear">
+									<a href="#">男生</a>
+									<a href="#">女生</a>
+									<a href="#">童装</a>
+									<a href="#">鞋履</a>
+									<a href="#">箱包</a>
+									<a href="#">配饰</a>
+								</div>		
+							</div>
+							<div class="hot">
+								<h4>三折封顶</h4>
+								<div class="hotList clear">
+									<a href="#">男生</a>
+									<a href="#">女生</a>
+									<a href="#">童装</a>
+									<a href="#">鞋履</a>
+									<a href="#">箱包</a>
+									<a href="#">配饰</a>
+								</div>		
+							</div>
+						</div>
+						<div class="submenu_right right">
+							<img src="img/erji8.jpg" alt="二级菜单图片">
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<!-- banner图 -->
 			<!--要做轮播效果，继续加banner图6，已添加图片 -->
 			<div class="banner left">
-				<ul>
+				<ul class="bigImg">
 					<li><a href="#"><img src="img/banner1.jpg" alt="banner图第一张"></a></li>
-					<!-- <li><a href="#"><img src="img/banner2.jpg" alt="banner图第二张"></a></li>
+					<li><a href="#"><img src="img/banner2.jpg" alt="banner图第二张"></a></li>
 					<li><a href="#"><img src="img/banner3.jpg" alt="banner图第三张"></a></li>
 					<li><a href="#"><img src="img/banner4.jpg" alt="banner图第四张"></a></li>
 					<li><a href="#"><img src="img/banner5.jpg" alt="banner图第五张"></a></li>
-					<li><a href="#"><img src="img/banner6.jpg" alt="banner图第六张"></a></li> -->
+					<li><a href="#"><img src="img/banner6.jpg" alt="banner图第六张"></a></li>
 				</ul>
+				<div class="btn">
+					<div class="btnPrev">&lt;</div>
+					<div class="btnNext">&gt;</div>
+				</div>
+				
 				<ul class="banner_bottom clear">
-					<li>超级会员日<span>|</span></li>
-					<li>潮牌日<span>|</span></li>
-					<li>品质羽绒<span>|</span></li>
-					<li>心机内搭<span>|</span></li>
-					<li>牛仔裤<span>|</span></li>
+					<li class="active">超级会员日</li>
+					<li>潮牌日</li>
+					<li>品质羽绒</li>
+					<li>心机内搭</li>
+					<li>牛仔裤</li>
 					<li>早春该穿啥</li>
 				</ul>
 			</div>
@@ -241,38 +736,43 @@
 	<!-- banner图下面的轮播图，五张轮播，已加图片 用了overflow-->
 	<div class="lunbo">
 		<div class="wrapper">
-			<ul>
-				<li>
-					<a href="#"><img src="img/lunbo1.jpg" alt="轮播图1"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo2.jpg" alt="轮播图2"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo3.jpg" alt="轮播图3"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo4.jpg" alt="轮播图4"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo5.jpg" alt="轮播图5"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo6.jpg" alt="轮播图6"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo7.jpg" alt="轮播图7"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo8.jpg" alt="轮播图8"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo9.jpg" alt="轮播图9"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/lunbo10.jpg" alt="轮播图10"></a>
-				</li>
-			</ul>	
+			<div class="brand">
+				<ul class="clear">
+					<li>
+						<a href="#"><img src="img/lunbo1.jpg" alt="轮播图1"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo2.jpg" alt="轮播图2"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo3.jpg" alt="轮播图3"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo4.jpg" alt="轮播图4"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo5.jpg" alt="轮播图5"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo6.jpg" alt="轮播图6"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo7.jpg" alt="轮播图7"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo8.jpg" alt="轮播图8"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo9.jpg" alt="轮播图9"></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/lunbo10.jpg" alt="轮播图10"></a>
+					</li>
+				</ul>
+			</div>
+			
+			<span class="lunbo_left"><img src="img/lunbo_left.png" alt=""></span>
+			<span class="lunbo_right"><img src="img/lunbo_right.png" alt=""></span>
 		</div>
 	</div>
 
@@ -283,13 +783,13 @@
 			<div class="title clear">
 				<h4 class="left">男生馆</h4>
 				<ul class="title_right right clear">
-					<li><span class="active">热门</span><span>|</span></li>
+					<li class="active"><span >热门</span><span>|</span></li>
 					<li><span>3折封顶</span><span>|</span></li>
 					<li><span>毛衣</span><span>|</span></li>
 					<li><span>休闲裤</span></li>
 				</ul>
 			</div>
-			<div class="pitures clear">
+			<div class="pitures clear on">
 				<div class="pitures_left left">
 					<a href="#"><img src="img/men1.png" alt="男生馆1" class="menFirst"></a>
 					<div class="list clear">
@@ -324,6 +824,408 @@
 					</div>	
 				</div>
 			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/men1.png" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">时尚棉羽</a>
+						<a href="#">毛呢大衣</a>
+						<a href="#">百搭毛衣</a>
+						<a href="#">休闲衣裤</a>
+						<a href="#">潮流鞋履</a>
+						<a href="#">箱包配饰</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/men01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/men02.png" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/men03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/men04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/men05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/men06.png" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/m1.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男针织西服</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/men1.png" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">时尚棉羽</a>
+						<a href="#">毛呢大衣</a>
+						<a href="#">百搭毛衣</a>
+						<a href="#">休闲衣裤</a>
+						<a href="#">潮流鞋履</a>
+						<a href="#">箱包配饰</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/men01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/men02.png" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/men03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/men04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/men05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/men06.png" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/m2.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">【秋冬新品】男元宝肌理长袖毛</a>
+							<p>
+								<span>￥169</span>
+								<span>￥199</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男基本V领长袖毛衫</a>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男基本V领长袖毛衫</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">雅圣利</a>
+							<a href="#">男士毛衣</a>
+							<br><br>
+							<p>
+								<span>￥98</span>
+								<span>￥299</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男基本V领长袖毛衫</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男基本V领长袖毛衫</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">【秋冬新品】男几何提花条纹毛</a>
+							<p>
+								<span>￥79</span>
+								<span>￥199</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男基本V领长袖毛衫</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">【秋冬新品】男精致羊毛中长开衫大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/men1.png" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">时尚棉羽</a>
+						<a href="#">毛呢大衣</a>
+						<a href="#">百搭毛衣</a>
+						<a href="#">休闲衣裤</a>
+						<a href="#">潮流鞋履</a>
+						<a href="#">箱包配饰</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/men01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/men02.png" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/men03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/men04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/men05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/men06.png" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/m3.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">【秋冬新品】K系列梭织男裤</a>
+							<p>
+								<span>￥119</span>
+								<span>￥239</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士休闲裤</a>
+							<br><br>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">【春季新品】男精致西装长裤</a>
+							<p>
+								<span>￥399</span>
+								<span>￥499</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">符号公社</a>
+							<a href="#">男式修身纯色百搭休闲长裤</a>
+							<p>
+								<span>￥149</span>
+								<span>￥298</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男基本标准直筒梭织长裤</a>
+							<p>
+								<span>￥79</span>
+								<span>￥169</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男基本标准直筒梭织长裤</a>
+							<p>
+								<span>￥139</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">【秋冬新品】男梭织跑裤</a>
+							<p>
+								<span>￥169</span>
+								<span>￥199</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">【秋冬新品】男时尚腰头修身长</a>
+							<p>
+								<span>￥119</span>
+								<span>￥239</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">【秋冬新品】男精致毛料慢跑裤</a>
+							<p>
+								<span>￥349</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">【秋冬新品】男口袋细节送腰带</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -334,13 +1236,13 @@
 			<div class="title clear">
 				<h4 class="left">女生馆</h4>
 				<ul class="title_right right clear">
-					<li><span class="active">热门</span><span>|</span></li>
+					<li class="active"><span>热门</span><span>|</span></li>
 					<li><span>99元封顶</span><span>|</span></li>
 					<li><span>秋冬外套</span><span>|</span></li>
 					<li><span>裤装</span></li>
 				</ul>
 			</div>
-			<div class="pitures clear">
+			<div class="pitures clear on">
 				<div class="pitures_left left">
 					<a href="#"><img src="img/women1.jpg" alt="男生馆1" class="menFirst"></a>
 					<div class="list clear">
@@ -375,6 +1277,408 @@
 					</div>	
 				</div>
 			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/women1.jpg" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">时尚棉羽</a>
+						<a href="#">毛呢大衣</a>
+						<a href="#">暖情毛衣</a>
+						<a href="#">休闲衣裤</a>
+						<a href="#">时尚鞋履</a>
+						<a href="#">箱包配饰</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/women01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/women02.jpg" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/women03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/women04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/women05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/women06.jpg" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/w1.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女长袖毛衫</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w1.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m1.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/women1.jpg" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">时尚棉羽</a>
+						<a href="#">毛呢大衣</a>
+						<a href="#">暖情毛衣</a>
+						<a href="#">休闲衣裤</a>
+						<a href="#">时尚鞋履</a>
+						<a href="#">箱包配饰</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/women01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/women02.jpg" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/women03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/women04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/women05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/women06.jpg" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/w2.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女长袖毛衫</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w2.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m2.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/women1.jpg" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">时尚棉羽</a>
+						<a href="#">毛呢大衣</a>
+						<a href="#">暖情毛衣</a>
+						<a href="#">休闲衣裤</a>
+						<a href="#">时尚鞋履</a>
+						<a href="#">箱包配饰</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/women01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/women02.jpg" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/women03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/women04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/women05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/women06.jpg" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/w3.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女长袖毛衫</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/w3.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/m3.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -385,13 +1689,13 @@
 			<div class="title clear">
 				<h4 class="left">潮牌馆</h4>
 				<ul class="title_right right clear">
-					<li><span class="active">热门</span><span>|</span></li>
+					<li class="active"><span>热门</span><span>|</span></li>
 					<li><span>夹克</span><span>|</span></li>
 					<li><span>毛衣卫衣</span><span>|</span></li>
 					<li><span>长裤</span></li>
 				</ul>
 			</div>
-			<div class="pitures clear">
+			<div class="pitures clear on">
 				<div class="pitures_left left">
 					<a href="#"><img src="img/chaopai1.jpg" alt="男生馆1" class="menFirst"></a>
 					<div class="list clear">
@@ -426,6 +1730,408 @@
 					</div>	
 				</div>
 			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/chaopai1.jpg" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">羽绒服/棉服</a>
+						<a href="#">呢大衣</a>
+						<a href="#">毛衣/卫衣</a>
+						<a href="#">裤装</a>
+						<a href="#">潮鞋</a>
+						<a href="#">保暖内衣</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/chaopai01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/chaopai02.jpg" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/chaopai03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/chaopai04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/chaopai05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/chaopai06.jpg" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/c1.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女长袖毛衫</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c1.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/chaopai1.jpg" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">羽绒服/棉服</a>
+						<a href="#">呢大衣</a>
+						<a href="#">毛衣/卫衣</a>
+						<a href="#">裤装</a>
+						<a href="#">潮鞋</a>
+						<a href="#">保暖内衣</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/chaopai01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/chaopai02.jpg" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/chaopai03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/chaopai04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/chaopai05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/chaopai06.jpg" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/c2.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女长袖毛衫</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c2.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="pitures clear">
+				<div class="pitures_left left">
+					<a href="#"><img src="img/chaopai1.jpg" alt="男生馆1" class="menFirst"></a>
+					<div class="list clear">
+						<a href="#">羽绒服/棉服</a>
+						<a href="#">呢大衣</a>
+						<a href="#">毛衣/卫衣</a>
+						<a href="#">裤装</a>
+						<a href="#">潮鞋</a>
+						<a href="#">保暖内衣</a>
+					</div>
+					<ul class="logoes clear">
+						<li><a href="#"><img src="img/chaopai01.jpg" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/chaopai02.jpg" alt="logo2"></a></li>
+						<li><a href="#"><img src="img/chaopai03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/chaopai04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/chaopai05.jpg" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/chaopai06.jpg" alt="logo6"></a></li>
+					</ul>
+				</div>
+				<ul class="pitures_tab right clear">
+					<li>
+						<a href="#"><img src="img/c3.1.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.2.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女长袖毛衫</a>
+							<br><br>
+							<p>
+								<span>￥129</span>
+								<span>￥599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.3.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">女多扣装饰短款大衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥899</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.4.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士羊毛呢连帽羽绒大衣</a>
+							<p>
+								<span>￥399</span>
+								<span>￥1599</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.5.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">THE 2ND LAW</a>
+							<a href="#">潮男个性印花皮衣</a>
+							<p>
+								<span>￥199</span>
+								<span>￥958</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.6.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">简约斜拉链大衣</a>
+							<p>
+								<span>￥129</span>
+								<span>￥549</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.7.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男呢料西装</a>
+							<p>
+								<span>￥149</span>
+								<span>￥499</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.8.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">METERSBONWE</a>
+							<a href="#">男连帽中长款大衣</a>
+							<p>
+								<span>￥139</span>
+								<span>￥599</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.9.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男士磨毛面料西裤</a>
+							<p>
+								<span>￥89</span>
+								<span>￥399</span>
+							</p>	
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/c3.0.jpg" alt="男装1"></a>
+						<div>
+							<a href="#">ME＆CITY</a>
+							<a href="#">男含羊毛呢大衣</a>
+							<p>
+								<span>￥339</span>
+								<span>￥1599</span>
+							</p>	
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -436,13 +2142,13 @@
 			<div class="title clear">
 				<h4 class="left">运动馆</h4>
 				<ul class="title_right right clear">
-					<li><span class="active">热门</span><span>|</span></li>
+					<li class="active"><span>热门</span><span>|</span></li>
 					<li><span>跑步鞋</span><span>|</span></li>
 					<li><span>篮球鞋</span><span>|</span></li>
 					<li><span>运动鞋</span></li>
 				</ul>
 			</div>
-			<div class="pitures clear">
+			<div class="pitures clear on">
 				<div class="pitures_left left">
 					<a href="#"><img src="img/yundong1.jpg" alt="男生馆1" class="menFirst"></a>
 					<div class="list clear">
@@ -487,13 +2193,13 @@
 			<div class="title clear">
 				<h4 class="left">儿童馆</h4>
 				<ul class="title_right right clear">
-					<li><span class="active">热门</span><span>|</span></li>
+					<li class="active"><span>热门</span><span>|</span></li>
 					<li><span>3折封顶</span><span>|</span></li>
 					<li><span>外套</span><span>|</span></li>
 					<li><span>休闲裤</span></li>
 				</ul>
 			</div>
-			<div class="pitures clear">
+			<div class="pitures clear on">
 				<div class="pitures_left left">
 					<a href="#"><img src="img/tonglc-1229_01.jpg" alt="男生馆1" class="menFirst"></a>
 					<div class="list clear">
@@ -538,13 +2244,13 @@
 			<div class="title clear">
 				<h4 class="left">生活馆</h4>
 				<ul class="title_right right clear">
-					<li><span class="active">热门</span><span>|</span></li>
+					<li class="active"><span>热门</span><span>|</span></li>
 					<li><span>热销TOP款</span><span>|</span></li>
 					<li><span>内衣袜</span><span>|</span></li>
 					<li><span>四件套</span></li>
 				</ul>
 			</div>
-			<div class="pitures clear">
+			<div class="pitures clear on">
 				<div class="pitures_left left">
 					<a href="#"><img src="img/life1.jpg" alt="男生馆1" class="menFirst"></a>
 					<div class="list clear">
@@ -556,11 +2262,11 @@
 						<a href="#">灯</a>
 					</div>
 					<ul class="logoes clear">
-						<li><a href="#"><img src="img/life01.png" alt="logo1"></a></li>
+						<li><a href="#"><img src="img/life01.jpg" alt="logo1"></a></li>
 						<li><a href="#"><img src="img/life02.jpg" alt="logo2"></a></li>
-						<li><a href="#"><img src="img/life03.png" alt="logo3"></a></li>
-						<li><a href="#"><img src="img/life04.png" alt="logo4"></a></li>
-						<li><a href="#"><img src="img/life05.png" alt="logo5"></a></li>
+						<li><a href="#"><img src="img/life03.jpg" alt="logo3"></a></li>
+						<li><a href="#"><img src="img/life04.jpg" alt="logo4"></a></li>
+						<li><a href="#"><img src="img/life05.jpg" alt="logo5"></a></li>
 						<li><a href="#"><img src="img/life06.jpg" alt="logo6"></a></li>
 					</ul>
 				</div>
@@ -663,8 +2369,8 @@
 
 	<!-- 最右侧小图 -->
 	<div class="slideBar">
-		<a href="#" class="visited"></a>
-		<a href="#" class="top"></a>
+		<span class="visited"></span>
+		<span class="top"></span>
 	</div>
 </body>
 </html>

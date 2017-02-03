@@ -15,31 +15,50 @@ $mainColor:#d51819;
 			padding:0 14px;
 			position:relative;
 			font-size:12px;
+
 			.secondMenu{
 				display:none;
 				background-color:#fff;
 				position:absolute;
-				top:24px;
+				top:25px;
 				left:-1px;
 				border:1px solid #ddd;
 				border-bottom:none;
 				width:100px;
 				box-shadow:0 0 4px #ddd;
+				&.app,&.weixin{
+					border:none;
+					top:18px;
+					left:-2px;
+					background-color:#fff;
+					z-index:111;
+				}
+				&.weixin{
+					border:none;
+					top:18px;
+					left:-72px;
+				}
 				li{
 					line-height:1.8em;
-					padding:4px 0 0 4px;
 					a{
 						color:#000;
+						padding:4px 0 0 4px;
+						display:inline-block;
 					}
-				}
-				img{
-					width:140px;
-					height:140px;
+					img{
+						width:140px;
+						height:140px;
+						
+					}
 				}
 			}
 		}
 		& .fm{
 			position:relative;
+			border:1px solid #fff;
+			border-top:none;
+			border-bottom:none;
+			background-color:#fff;
 			em{
 				background:url(img/Veo_mbshop_spirit_pic.png) no-repeat 0 -50px;
 				display:block;
@@ -53,10 +72,23 @@ $mainColor:#d51819;
 				border:1px solid #ddd;
 				border-top:none;
 				border-bottom:none;
-				padding-right:20px;
-				box-shadow-left:0 0 4px #ddd;
+				box-shadow:0 0 4px #ddd;
 				& .secondMenu{
 					display:block;
+				}
+				& i{
+					display:block;
+					width:51px;
+					height:4px;
+					background-color:#fff;
+					position:absolute;
+					left:0;
+					bottom:5px;
+					z-index:20;
+					border:none;
+					&.my{
+						width:77px;
+					}
 				}
 			}
 			& img{
@@ -157,7 +189,7 @@ header{
 		}
 	}
 	.index{
-		text-align:vertical;position:absolute;bottom:2px;left:260px;
+		text-align:vertical;position:absolute;bottom:2px;left:330px;
 		a{
 			padding:0 26px;
 			color:#323232;
@@ -189,6 +221,125 @@ header{
 			}
 			&.secondHot{
 				left:590px;
+			}
+		}
+	}
+}
+
+//主体部分
+//菜单栏，一二级菜单
+.select_all{
+	border:1px solid $mainColor;
+	width:234px;
+	position:relative;
+	.menu{
+		padding:6px 1px 4px 12px;
+		&:hover .subMenu{
+			display:block;
+		}
+		&:hover span{
+			display:none;
+		}
+		a.title{
+			float:left;
+			color:#000;
+			font-weight:bold;
+		}
+		span{
+			float:right;
+			color:$mainColor;
+			font-weight:bold;
+			margin-right:5px;	
+		}
+		.content{
+			li{
+				float:left;
+				margin-right:5px;
+				margin-bottom:4px;
+				a{
+					&.active{
+						color:$mainColor;
+					}
+				}
+			}	
+		}
+
+		//二级菜单
+		.subMenu{
+			z-index:30;
+			display:none;
+			background-color:#fff;
+			position:absolute;
+			left:234px;
+			top:-2px;
+			border:1px solid #ddd;
+			border-top:1px solid $mainColor;
+			width:724px;
+			height:532px;
+			em{
+				display:block;
+				background:url(img/Veo_mbshop_spirit_pic.png) no-repeat 0 -211px;
+				width:9px;
+				height:15px;
+				position:absolute;
+				top:10px;
+				left:-8px;
+				&.menClothes{
+					top:90px;
+				}
+				&.womenClothes{
+					top:160px;
+				}
+				&.childrenClothes{
+					top:235px;
+				}
+				&.shoes{
+					top:310px;
+				}
+				&.bag{
+					top:385px;
+				}
+				&.life{
+					top:440px;
+				}
+				&.discount{
+					top:490px;
+				}
+			}
+			.submenu_left{
+				width:183px;
+				height:532px;
+				border-right:1px solid #ddd;
+				.hot{
+					margin:18px 0 0 15px;
+					h4{
+						color:#000;
+						&:hover{
+							color:$mainColor;
+						}
+					}
+					.hotList{
+						a{
+							margin-right:16px;
+							line-height:28px;
+							float:left;
+						}
+					}
+				}
+			}
+			.submenu_right{
+				p{
+					color:#000;
+					font-weight:bold;
+					margin:22px 0 22px 14px;
+				}
+				.pinpai{
+					width:540px;
+					a{
+						line-height:45px;
+						margin-left:14px;
+					}
+				}
 			}
 		}
 	}
@@ -283,6 +434,9 @@ header{
 
 //最右侧小图
 .slideBar{
+	span{
+		cursor:pointer;
+	}
 	.visited{
 		background:url(img/online_service.png);
 		width:55px;
@@ -300,5 +454,6 @@ header{
 		position:fixed;
 		right:15px;
 		top:500px;
+		display:none;
 	}
 }

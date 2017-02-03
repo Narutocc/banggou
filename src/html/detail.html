@@ -3,17 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>详情</title>
-	<link rel="stylesheet" href="../css/list.css">
+	<link rel="stylesheet" href="../css/detail.css">
+	<link rel="stylesheet" href="../assert/jquery-gdszoom/jquery.gdszoom.css">
 	<script src="../assert/jquery-3.1.1.js"></script>
+	<script src="../assert/jquery-gdszoom/jquery.gdszoom.js"></script>
+	<script src="../js/detail.js"></script>
 </head>
 <body>
-	<!-- 头部导航，与首页相同 -->
+	<!-- 头部导航 -->
 	<!-- 二级菜单hover有bug -->
 	<div class="top">
 		<div class="wrapper clear">
 			<p class="left">欢迎来到邦购网，全场满199元包邮</p>
 			<ul class="firstMenu right">
-				<li class="fm"><a href="#">登录</a>
+				<li class="fm"><a href="#">登录<i></i></a>
 					<ul class="secondMenu">
 						<li><a href="#">QQ账户登录</a></li>
 						<li><a href="#">支付宝登录</a></li>
@@ -21,7 +24,7 @@
 					</ul>
 				</li>
 				<li><a href="#">注册</a></li>
-				<li class="fm"><a href="#">我的邦购</a><em></em>
+				<li class="fm"><a href="#">我的邦购<i class="my"></i></a><em></em>
 					<ul class="secondMenu">
 						<li><a href="#">我的订单</a></li>
 						<li><a href="#">我的积分</a></li>
@@ -30,15 +33,15 @@
 					</ul>
 				</li>
 				<li><a href="#">会员中心</a></li>
-				<li  class="fm _download"><img src="../css/img/Iphone-vertical.png" alt="手机装饰图"><a href="#">下载APP</a><em></em>
-					<ul class="secondMenu">
-						<li><img src="../img/mbshop_pic_mobile.png" alt="下载APP二维码"></li>
+				<li  class="fm _download"><img src="css/img/Iphone-vertical.png" alt="手机装饰图"><a href="#">下载APP</a><em></em>
+					<ul class="secondMenu app">
+						<li><img src="img/mbshop_pic_mobile.png" alt="下载APP二维码"></li>
 					</ul>
 				</li>
 				<li><a href="#">微博</a></li>
 				<li  class="fm"><a href="#">微信</a>
-					<ul class="secondMenu">
-						<li><img src="../img/mbshop_pic_erweima.jpg" alt="微信二维码"></li>
+					<ul class="secondMenu weixin">
+						<li><img src="img/mbshop_pic_erweima.jpg" alt="微信二维码"></li>
 					</ul>
 				</li>
 			</ul>
@@ -67,7 +70,6 @@
 		</div>
 	</header>
 
-
 	<div class="select">
 		<div class="wrapper clear">
 			<div class="selectes left"><em></em>商品分类</div>
@@ -83,14 +85,719 @@
 		</div>		
 	</div>
 
+	<!-- 菜单栏，一二级菜单 -->
+	<div class="select_all left">
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">全部分类</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#">温暖毛衫</a></li>
+				<li><a href="#">长款羽绒服</a></li>
+				<li><a href="#" class="active">17新品</a></li>
+				<li><a href="#">大衣</a></li>
+				<li><a href="#">雪地靴</a></li>
+				<li><a href="#">爆款热卖</a></li>
+			</ul>
+
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>男生热门</h4>
+						<div class="hotList clear">
+							<a href="#">冬新品</a>
+							<a href="#">新品夹克</a>
+							<a href="#">军装夹克</a>
+							<a href="#">衬衫</a>
+							<a href="#">慢跑裤</a>
+							<a href="#">百搭休闲裤</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>女生热门</h4>
+						<div class="hotList clear">
+							<a href="#">冬新品</a>
+							<a href="#">商场同款</a>
+							<a href="#">风衣</a>
+							<a href="#">夹克</a>
+							<a href="#">裙装</a>
+							<a href="#">背带裙/背带裤</a>
+							<a href="#">阔脚裤</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>儿童热门</h4>
+						<div class="hotList clear">
+							<a href="#">棉服</a>
+							<a href="#">羽绒服</a>
+							<a href="#">毛衣</a>
+							<a href="#">裤子</a>
+							<a href="#">外套</a>
+							<a href="#">套装</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>生活热门</h4>
+						<div class="hotList clear">
+							<a href="#">随行杯</a>
+							<a href="#">取暖小件</a>
+							<a href="#">创意礼品</a>
+							<a href="#">面膜</a>
+							<a href="#">护肤套装</a>
+							<a href="#">礼盒</a>
+							<a href="#">家居鞋/拖鞋</a>
+							<a href="#">披毯/盖毯</a>
+							<a href="#">保温杯</a>
+						</div>		
+					</div>		
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji1.jpg" alt="二级菜单图片">
+					<p>当季流行热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji1.1.jpg" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji1.2.png" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji1.3.jpg" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji1.4.jpg" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji1.5.jpg" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji1.6.png" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji1.7.png" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji1.8.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">男装</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#">羽绒棉服</a></li>
+				<li><a href="#" class="active">雅圣利</a></li>
+				<li><a href="#">牛仔裤</a></li>
+				<li><a href="#" class="active">休闲裤</a></li>
+				<li><a href="#">毛衣</a></li>
+				<li><a href="#">大衣</a></li>
+				<li><a href="#">卫衣</a></li>
+				<li><a href="#" class="active">3折封顶</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="menClothes"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>上装</h4>
+						<div class="hotList clear">
+							<a href="#">羽绒服</a>
+							<a href="#">呢大衣</a>
+							<a href="#">毛织背心</a>
+							<a href="#">皮衣</a>
+							<a href="#">夹克</a>
+							<a href="#">毛衣</a>
+							<a href="#">长袖T恤</a>
+							<a href="#">卫衣</a>
+							<a href="#">长袖衬衫</a>
+							<a href="#">西装</a>
+							<a href="#">套头卫衣</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>下装</h4>
+						<div class="hotList clear">
+							<a href="#">牛仔长裤</a>
+							<a href="#">休闲长裤</a>
+							<a href="#">西裤</a>
+							<a href="#">运动长裤</a>
+							<a href="#">针织长裤</a>
+							<a href="#">中短裤</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>内衣</h4>
+						<div class="hotList clear">
+							<a href="#">背心</a>
+							<a href="#">内衣裤装</a>
+							<a href="#">家居服</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji2.jpg" alt="二级菜单图片">
+					<p>男装热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji2.1.png" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji2.2.jpg" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji2.3.png" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji2.4.png" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji2.5.jpg" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji2.6.jpg" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji2.7.png" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji2.8.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">女装</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#">呢大衣</a></li>
+				<li><a href="#" class="active">羽绒棉服</a></li>
+				<li><a href="#" class="active">美都汇</a></li>
+				<li><a href="#">牛仔裤</a></li>
+				<li><a href="#">打底裤</a></li>
+				<li><a href="#" class="active">毛衣</a></li>
+				<li><a href="#">牛仔裤</a></li>
+				<li><a href="#">裙装</a></li>
+				<li><a href="#">冬家居服</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="womenClothes"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>上装</h4>
+						<div class="hotList clear">
+							<a href="#">羽绒服</a>
+							<a href="#">风衣</a>
+							<a href="#">棉服</a>
+							<a href="#">夹克</a>
+							<a href="#">外套</a>
+							<a href="#">毛衣</a>
+							<a href="#">长袖衬衫</a>
+							<a href="#">大衣</a>
+							<a href="#">毛衣</a>
+							<a href="#">马甲</a>
+							<a href="#">T恤</a>
+							<a href="#">卫衣</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>下装</h4>
+						<div class="hotList clear">
+							<a href="#">牛仔裤</a>
+							<a href="#">打底裤</a>
+							<a href="#">运动裤</a>
+							<a href="#">休闲裤</a>
+							<a href="#">连身裤</a>
+							<a href="#">阔脚裤</a>
+							<a href="#">短裤</a>
+							<a href="#">针织休闲裤</a>
+							<a href="#">西裤</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>裙装</h4>
+						<div class="hotList clear">
+							<a href="#">连衣裙</a>
+							<a href="#">半身裙</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>内衣</h4>
+						<div class="hotList clear">
+							<a href="#">吊带</a>
+							<a href="#">内衣裤装</a>
+							<a href="#">家居套装</a>
+							<a href="#">文胸</a>
+							<a href="#">袜子</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji3.jpg" alt="二级菜单图片">
+					<p>女装热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji3.1.jpg" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji3.2.png" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji3.3.jpg" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji3.4.jpg" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji3.5.jpg" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji3.6.jpg" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji3.7.png" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji3.8.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">儿童</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#" class="active">羽绒服</a></li>
+				<li><a href="#">外套</a></li>
+				<li><a href="#">卫衣套装</a></li>
+				<li><a href="#" class="active">贴心毛衣</a></li>
+				<li><a href="#">舒适针织裤</a></li>
+				<li><a href="#">童鞋</a></li>
+				<li><a href="#" class="active">童包配</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="childrenClothes"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>上装</h4>
+						<div class="hotList clear">
+							<a href="#">羽绒服</a>
+							<a href="#">套头毛衣</a>
+							<a href="#">夹克</a>
+							<a href="#">长袖T恤</a>
+							<a href="#">衬衫</a>
+							<a href="#">套头卫衣</a>
+							<a href="#">外套</a>
+							<a href="#">棉服</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>下装</h4>
+						<div class="hotList clear">
+							<a href="#">针织裤</a>
+							<a href="#">背带裤</a>
+							<a href="#">牛仔裤</a>
+							<a href="#">休闲裤</a>
+							<a href="#">打底裤</a>
+							<a href="#">半身裙</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>连身</h4>
+						<div class="hotList clear">
+							<a href="#">连衣裙</a>
+							<a href="#">卫衣套装</a>
+							<a href="#">背带裤</a>
+							<a href="#">T恤套装</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>搭配</h4>
+						<div class="hotList clear">
+							<a href="#">童鞋</a>
+							<a href="#">童包</a>
+							<a href="#">童配饰</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji4.jpg" alt="二级菜单图片">
+					<p>童装热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji4.1.jpg" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji4.2.jpg" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji4.3.jpg" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji4.4.jpg" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji4.5.jpg" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji4.6.jpg" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji4.7.jpg" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji4.6.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">鞋履</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#" class="active">休闲鞋</a></li>
+				<li><a href="#">跑步鞋</a></li>
+				<li><a href="#" class="active">pony</a></li>
+				<li><a href="#">帆布鞋</a></li>
+				<li><a href="#" class="active">保暖雪地靴</a></li>
+				<li><a href="#">篮球鞋</a></li>
+				<li><a href="#" class="active">匡威</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="shoes"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>人气男鞋</h4>
+						<div class="hotList clear">
+							<a href="#">休闲鞋</a>
+							<a href="#">运动鞋</a>
+							<a href="#">商务鞋</a>
+							<a href="#">时装鞋</a>
+							<a href="#">硫化鞋</a>
+							<a href="#">帆布鞋</a>
+							<a href="#">跑步鞋</a>
+							<a href="#">滑板鞋</a>
+							<a href="#">篮球鞋</a>
+							<a href="#">凉拖凉鞋</a>
+							<a href="#">训练鞋</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>人气女鞋</h4>
+						<div class="hotList clear">
+							<a href="#">帆布鞋</a>
+							<a href="#">休闲鞋</a>
+							<a href="#">运动鞋</a>
+							<a href="#">凉拖凉鞋</a>
+							<a href="#">潮靴</a>
+							<a href="#">滑板鞋</a>
+							<a href="#">商务鞋</a>
+							<a href="#">训练鞋</a>
+							<a href="#">篮球鞋</a>
+							<a href="#">时装鞋</a>
+							<a href="#">跑步鞋</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>潮流中性</h4>
+						<div class="hotList clear">
+							<a href="#">运动鞋</a>
+							<a href="#">休闲鞋</a>
+							<a href="#">帆布鞋</a>
+							<a href="#">凉鞋</a>
+							<a href="#">滑板鞋</a>
+							<a href="#">单鞋</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji5.jpg" alt="二级菜单图片">
+					<p>鞋热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji5.1.jpg" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji5.2.jpg" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji5.3.jpg" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji5.4.jpg" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji5.5.jpg" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji5.6.jpg" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji5.7.jpg" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji5.8.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">箱包/配饰</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#">双肩包</a></li>
+				<li><a href="#">皮带</a></li>
+				<li><a href="#">腕表</a></li>
+				<li><a href="#">围巾</a></li>
+				<li><a href="#">手套</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="bag"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>品质男包</h4>
+						<div class="hotList clear">
+							<a href="#">双肩包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">书包</a>
+							<a href="#">钱包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">胸包</a>
+							<a href="#">手提包</a>
+							<a href="#">单肩包</a>
+							<a href="#">腰包</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>潮流女包</h4>
+						<div class="hotList clear">
+							<a href="#">书包</a>
+							<a href="#">双肩包</a>
+							<a href="#">手提包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">手拿包</a>
+							<a href="#">单肩包</a>
+							<a href="#">钱包/卡包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">化妆包</a>
+							<a href="#">收纳包</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>时尚配饰</h4>
+						<div class="hotList clear">
+							<a href="#">皮带</a>
+							<a href="#">围巾</a>
+							<a href="#">钥匙扣</a>
+							<a href="#">眼镜</a>
+							<a href="#">包挂饰</a>
+							<a href="#">发圈</a>
+							<a href="#">手链/手镯</a>
+							<a href="#">帽子</a>
+							<a href="#">腕表</a>
+							<a href="#">吊坠/项链</a>
+							<a href="#">戒指</a>
+							<a href="#">耳饰</a>
+							<a href="#">发箍发饰</a>
+							<a href="#">手套</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji6.jpg" alt="二级菜单图片">
+					<p>箱包热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji6.1.jpg" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji6.2.jpg" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji6.3.jpg" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji6.4.jpg" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji6.5.jpg" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji6.6.jpg" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji6.7.jpg" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji6.8.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">生活/个护</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#">四件套</a></li>
+				<li><a href="#">袜子</a></li>
+				<li><a href="#" class="active">保暖内衣</a></li>
+				<li><a href="#">家具鞋</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="life"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>美妆个护</h4>
+						<div class="hotList clear">
+							<a href="#">乳液/面霜</a>
+							<a href="#">化妆水</a>
+							<a href="#">洁面</a>
+							<a href="#">面膜</a>
+							<a href="#">底妆</a>
+							<a href="#">礼盒</a>
+							<a href="#">优惠套装</a>
+							<a href="#">精华</a>
+							<a href="#">洗发护发</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>生活</h4>
+						<div class="hotList clear">
+							<a href="#">创意礼品</a>
+							<a href="#">床上纺织品</a>
+							<a href="#">随行杯</a>
+							<a href="#">耳机/耳麦</a>
+							<a href="#">保温杯</a>
+							<a href="#">椅垫/沙发垫</a>
+							<a href="#">披毯/盖毯</a>
+							<a href="#">移动电源</a>
+							<a href="#">枕芯/被芯</a>
+							<a href="#">家居鞋/拖鞋</a>
+							<a href="#">面膜</a>
+							<a href="#">底妆</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji7.jpg" alt="二级菜单图片">
+					<p>生活热门品牌</p>
+					<div class="pinpai clear">
+						<a href="#"><img src="../img/erji7.1.png" alt="品牌1"></a>
+						<a href="#"><img src="../img/erji7.2.png" alt="品牌2"></a>
+						<a href="#"><img src="../img/erji7.3.png" alt="品牌3"></a>
+						<a href="#"><img src="../img/erji7.4.jpg" alt="品牌4"></a>
+						<a href="#"><img src="../img/erji7.5.png" alt="品牌5"></a>
+						<a href="#"><img src="../img/erji7.6.jpg" alt="品牌6"></a>
+						<a href="#"><img src="../img/erji7.7.png" alt="品牌7"></a>
+						<a href="#"><img src="../img/erji7.8.jpg" alt="品牌8"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="clear">
+				<a class="title" href="#">折扣SALE</a>
+				<span>&gt;</span>
+			</div>
+			<ul class="content clear">
+				<li><a href="#">1折区</a></li>
+				<li><a href="#">2折区</a></li>
+				<li><a href="#">3折区</a></li>
+				<li><a href="#" class="active">69元封顶</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="subMenu clear">
+				<em class="discount"></em>
+				<div class="submenu_left left">
+					<div class="hot">
+						<h4>一折区</h4>
+						<div class="hotList clear">
+							<a href="#">男生</a>
+							<a href="#">女生</a>
+							<a href="#">童装</a>
+							<a href="#">鞋履</a>
+							<a href="#">箱包</a>
+							<a href="#">配饰</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>二折区</h4>
+						<div class="hotList clear">
+							<a href="#">男生</a>
+							<a href="#">女生</a>
+							<a href="#">童装</a>
+							<a href="#">鞋履</a>
+							<a href="#">箱包</a>
+							<a href="#">配饰</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>三折区</h4>
+						<div class="hotList clear">
+							<a href="#">男生</a>
+							<a href="#">女生</a>
+							<a href="#">童装</a>
+							<a href="#">鞋履</a>
+							<a href="#">箱包</a>
+							<a href="#">配饰</a>
+						</div>		
+					</div>
+					<div class="hot">
+						<h4>三折封顶</h4>
+						<div class="hotList clear">
+							<a href="#">男生</a>
+							<a href="#">女生</a>
+							<a href="#">童装</a>
+							<a href="#">鞋履</a>
+							<a href="#">箱包</a>
+							<a href="#">配饰</a>
+						</div>		
+					</div>
+				</div>
+				<div class="submenu_right right">
+					<img src="../img/erji8.jpg" alt="二级菜单图片">
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-	<!-- 列表页中间部分 -->
-	
-	<h1>shide sfsdfewrwesdsffrefref</h1>
-	
-	<h4>sarewfsdf</h4>
-	
+
+	<!-- 主体部分 -->
+	<div class="firstLine">
+		<div class="wrapper">
+			<a href="#">所有商品></a>
+			<a href="#">男装></a>
+			<a href="#">毛衣></a>
+			<a href="#">套头毛衣</a>
+		</div>
+	</div>
+	<div class="show">
+		<div class="wrapper clear">
+			<div class="pics left">
+				<div class="bigImg">
+					<img src="../img/de_men.jpg" alt="" data-big="../img/de_men.jpg">
+				</div>
+				<div class="samllImg">
+					<ul class="clear">
+						<li class="active"><img src="../img/de_men01.jpg" alt=""></li>
+						<li><img src="../img/de_men02.jpg" alt="" class="de_men de_men02"></li>
+						<li><img src="../img/de_men03.jpg" alt="" class="de_men03"></li>
+						<li><img src="../img/de_men04.jpg" alt="" class="de_men de_men04"></li>
+						<li><img src="../img/de_men05.jpg" alt="" class="de_men de_men05"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="details right">
+				<p class="name"><a href="#">米郎骑士</a>韩版纯棉三色拼接圆领套头毛衣针织衫899</p>
+				<p class="time">全国1月18日停止发货，2月8日恢复正常发货</p>
+				<div class="price">
+					<ul>
+						<li class="clear">
+							<b>售价：</b>
+							<strong>￥68</strong>
+							<i>吊牌价</i>
+							<em>￥358</em>
+							<span class="zhekou">1.9折</span>
+						</li>
+						<li class="rule clear">
+							<span>本品不参加vip，svip折扣</span>
+							<div class="huiyuan clear">
+								<a href="#">会员规则</a>
+								<div class="introduce">
+									在有效期1年内：<br/>
+									累计购物满1000元则升级为VIP；未满1000元则降为普通会员。<br/>
+									在有效期1年内：<br/>
+									累计购物满2000元则升级为SVIP；如累计购物1000~1999元，则降为VIP；如累计购物未满1000元则降为普通会员。<br/>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="colorSize">
+					<div class="color">
+						<p>
+							<span>颜色：</span>
+							<span>请选择颜色</span>
+						</p>
+						<div class="colors clear">
+							<a href="#"><img src="../img/de_men001.jpg" alt=""></a>
+							<a href="#"><img src="../img/de_men002.jpg" alt=""></a>
+							<a href="#"><img src="../img/de_men003.jpg" alt=""></a>
+						</div>
+					</div>
+					<div class="size clear">
+						<p>
+							<span>尺码：</span>
+							<span>请选择尺码</span>
+						</p>
+						<div class="help">
+							<a href="#" class="right">尺码选择助手</a>
+						</div>
+						<div class="sizes clear">
+							<a href="#">M</a>
+							<a href="#">L</a>
+							<a href="#">XL</a>
+							<a href="#">2XL</a>
+							<a href="#">3XL</a>
+						</div>
+					</div>
+				</div>
+				<div class="count">
+					<span>购买数量：</span>
+					<a href="#">-</a>
+					<input type="text" value="1">
+					<a href="#">+</a>
+					<em>（库存剩余997件）</em>
+				</div>
+				<div class="join">
+					<a href="#">加入购物袋</a>
+				</div>
+				<div class="more">
+					<span>浏览更多：</span>
+					<a href="#">套头毛衣</a>
+				</div>
+				<div class="tips clear">
+					<span>温馨提示：</span>
+					<ul class="right clear">
+						<li><em></em>此商品不可使用邦购红包</li>
+						<li><em></em>此商品不可使用积分</li>
+						<li><em></em>此商品由第三方品牌供应商发货</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<br>
 	<br>
 	<br>

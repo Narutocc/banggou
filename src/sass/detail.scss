@@ -1,3 +1,275 @@
 @import 'reset';
 @import 'common';
 @import 'public';
+
+
+
+//hover效果做不出来
+.select .selectes{
+	position:relative;
+}
+//更改公共样式中的hover，重置
+//主体部分
+.select_all{
+	display:none;
+	font-size:14px;
+	position:absolute;
+	left:75px;
+	background-color:#fff;
+	z-index:1;
+	a{
+		color:#999;
+	}
+}
+
+body{
+	font-size:12px;
+}
+//主体部分
+.firstLine{
+	margin:36px 0 10px 0;
+	a{
+		color:#000;
+		font-size:12px;
+	}
+}
+
+.show{
+	//左边图片
+	.pics{
+		.bigImg{
+			img{
+				width:480px;
+				height:480px;
+			}
+		}
+		.samllImg{
+			ul{
+				width:500px;
+				height:80px;
+				overflow:hidden;
+				margin-top:14px;
+				li{
+					float:left;
+					border:1px solid #c7c7c7;
+					width:80px;
+					height:80px;
+					line-height:90px;
+					text-align:center;
+					cursor:pointer;
+					box-sizing:border-box;
+					margin-right:20px;
+					&.active{
+						border:1px solid #f8584f;
+					}
+					&:hover{
+						border:1px solid #f8584f;
+					}
+					img{
+						margin:0 auto;
+						width:100%;
+						height:auto;
+						display:block;
+						&.de_men{
+							width:auto;
+							height:100%;
+							&.de_men02{
+								margin-left:4px;
+							}
+							&.de_men04{
+								margin-left:11px;
+							}
+							&.de_men05{
+								margin-left:9px;
+							}
+						}
+						&.de_men03{
+							margin-top:9px;
+						}
+					}
+				}
+			}
+		}
+	}
+	//右边详情
+	.details{
+		width:670px;
+		.name{
+			color:#222;
+			font-size:16px;
+			font-weight:bold;
+			a{
+				color:#222;
+				font-size:18px;	
+				font-weight:bold;
+				margin-right:10px;
+			}
+		}
+		.time{
+			color:#696969;
+			margin:10px 0 18px 0;
+		}
+		.price{
+			height:47px;
+			background-color:#f6f6f6;
+			padding:20px 14px 15px 14px;
+			ul{
+				li{
+					b,i{
+						font-weight:normal;
+						color:#222;
+					}
+					strong{
+						color:#f8584f;
+						font-size:22px;
+						margin:0 35px 0 12px;
+					}
+					em{
+						text-decoration: line-through;
+						color: #696969;
+					}
+					.zhekou{
+						float:right;
+						padding:0px 10px;
+						background-color:#f84646;
+						color:#fff;
+					}
+					
+					&.rule{
+						margin-top:5px;
+						.huiyuan{
+							float:right;
+							position:relative;
+							a{
+								border-bottom:1px solid #696969;
+								color:#696969;
+							}
+							.introduce{
+								display:none;
+								position:absolute;
+								left:-370px;
+								width:400px;
+								height:auto;
+								background-color:#fff;
+								padding:10px;
+								box-shadow:0 0 15px #ccc;
+								line-height:1.5em;
+							}
+						}	
+					}
+				}
+			}
+		}
+		.colorSize{
+			p{
+				margin:18px 0 10px 0;
+				span:first-child{
+					color:#222;
+				}
+			}
+			.colors{
+				a{
+					display:block;
+					float:left;
+					margin-right:10px;
+					border:1px solid #c7c7c7;
+					padding:1px;
+					width:51px;
+					height:51px;
+					&:hover{
+						border:1px solid #f8584f;
+					}
+					img{
+						width:51px;
+						height:51px;
+					}
+				}
+			}
+			.sizes{
+				a{
+					display:block;
+					float:left;
+					padding:5px;
+					border:1px solid #dcdcdc;
+					margin-right:10px;
+					color:#222;
+					&:hover{
+						border:1px solid #f8584f;
+					}
+				}
+			}
+		}
+		.count{
+			margin:22px 0;
+			span{
+				color:#222;
+			}
+			a{
+				display:inline-block;
+				width:22px;
+				height:22px;
+				line-height:22px;
+				text-align:center;
+				border:1px solid #dcdcdc;
+			}
+			input{
+				width:38px;
+				height:23px;
+				border:1px solid #dcdcdc;
+				text-align:center;
+			}
+		}
+		.join{
+			a{
+				display:block;
+				width:200px;
+				height:32px;
+				line-height:32px;
+				text-align:center;
+				color:#fff;
+				background-color:#F8584F;
+				border-radius:2px;
+				font-weight:bold;
+				&:hover{
+					background-color:#FF7A72;
+					color:#666;
+				}
+			}
+		}
+		.more{
+			margin:20px 0;
+			span{
+				color:#222;
+			}
+			a{
+				color:#666;
+			}
+		}
+		.tips{
+			font-size:14px;
+			color:#666;
+			span{
+				color:#222;
+			}
+			ul{
+				width:600px;
+				li{
+					float:left;
+					width:300px;
+					margin-bottom:15px;
+					em{
+						display:inline-block;
+						width:6px;
+						height:6px;
+						border-radius:6px;
+						background-color:#666;
+						margin:0 5px 2px 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
