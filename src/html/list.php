@@ -48,9 +48,9 @@
         return $jsonData;
     }
 
-
-   // $sql = "select * from goodsdatalist limit 0,40";
-    $sql = "select * from goodsdatalist";
+    $page =(int)$_POST["page"];
+    $pageNum = ($page-1)*40;
+    $sql = "select * from goodsdatalist limit  $pageNum,40";
     $result = query($sql);
     echo json_encode($result,JSON_UNESCAPED_UNICODE);
 ?>

@@ -51,15 +51,23 @@ body { color: #333; font-size: 16px; font-family: '宋体'; }
 
 .register .message .firstStep .details p span.check { display: inline-block; background-color: #ccc; width: 110px; height: 30px; line-height: 30px; text-align: center; padding: 0; color: #000; font-size: 20px; letter-spacing: 12px; cursor: pointer; }
 
-.register .message .firstStep .details p span.change { position: absolute; left: 250px; color: #000; }
+.register .message .firstStep .details p span.change { position: absolute; left: 250px; top: 10px; color: #000; display: block; cursor: pointer; }
 
-.register .message .firstStep .details span { font-size: 12px; color: #f00; padding-left: 94px; }
+.register .message .firstStep .details span { font-size: 12px; color: #f00; padding-left: 94px; display: none; }
 
 .register .message .firstStep .send { position: relative; }
 
-.register .message .firstStep .send span { position: absolute; display: block; background: url(img/buttons.png) -225px -167px; width: 152px; height: 34px; top: 18px; left: 90px; }
+.register .message .firstStep .send span { position: absolute; display: block; background: url(img/buttons.png) 0 -85px; width: 215px; height: 35px; top: -40px; left: 90px; }
 
-.register .message .firstStep .send:hover span { background: url(img/buttons.png) -225px -210px; }
+.register .message .firstStep .send:hover span { background: url(img/buttons.png) 0 -127px; }
+
+.register .message .firstStep .send .again { position: absolute; left: 310px; top: -30px; font-size: 12px; }
+
+.register .message .firstStep .send .again em { color: #999; }
+
+.register .message .firstStep .send .again a { color: #222; border-bottom: 1px solid #222; }
+
+.register .message .firstStep .xieyi a { color: #222; border-bottom: 1px solid #222; font-size: 12px; margin-left: 85px; }
 
 .register .bottom { font-size: 12px; text-align: center; margin-top: 20px; }
 

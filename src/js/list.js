@@ -55,64 +55,66 @@ $(function(){
 		}.bind(this),300);
 	})
 
-	$.post('list.php',function(response){
-		// console.log(response);
+	$.post('list.php',{page:1},function(response){
+		console.log(22)
 		var res = JSON.parse(response);
-		console.log(res);
-
-
-
+		//console.log(res);
 		$('<ul/>').addClass('picList clear').appendTo($('.pic'));
+		$(res).each(function(idx,item){
+			//console.log(idx)
+			//console.log(item)
+			$('<li/>').addClass('data').html('<a href="#" class="bigImg"><img src="'+ item.bigImg +'" alt=""><span class="active">'+ item.redLine +'</span></a><p class="clear"><a href="#" class="left">'+ item.name +'</a><span class="_discount right">'+ item.discount +'</span></p><p><a href="#">'+ item.msg +'</a></p><p><strong>'+ item.price +'</strong><span class="price">'+ item.originPrice +'</span></p><p class="smallPic"></p>').appendTo($('.pic ul'));
+			
+			//判断redLine
+			console.log(item.redLine)
+			console.log(item.redLine.length)
+			if(item.redLine.length<=0){
+				$('.data .active').remove();
+			}
 
-		for(var i=0;i<res.length;i++){
-			$('<li/>').addClass('data');
-			$('.data').html(
-				'<a href="#" class="bigImg"><img src="'+ res[i].bigImg +'" alt=""></a>'
-			);
-			$('.data').appendTo($('.picList'));
-		}
-		// res.forEach(function(item,idx){
-		// 	console.log(item);
-		// 	var i = idx;
-		// 	console.log(idx);
-		// 	$('<li/>').addClass('data').appendTo($('.picList'));
-		// 	$('.data').html(
-		// 		'<a href="#" class="bigImg"><img src="'+ res[$(this)[i]].bigImg +'" alt=""></a>'
-		// 	)
+			//小图
+			var arr = item.smallImg.split(',');
+			$(arr).each(function(i,item){
+				//console.log($('.smallPic').eq(idx));
+				$('<a href="#"></a>').html('<img src="'+ item +'" alt="">').appendTo($('.smallPic').eq(idx));
+			})
 
-		// })
-		// res.forEach(function(item,idx){
-		// 	console.log(item)
-		// 	var i = idx;
-		// 	console.log(i)
-		// 	$('<li/>').addClass('data').appendTo($('.picList'))
-		// 	$('.data').html(
-		// 		'<a href="#" class="bigImg"><img src="'+ res[$(this)[i]].bigImg +'" alt=""></a>'
+			//点击第一个毛衣图片的时候跳转到详情页
+			$('.data a').first().attr('href','detail.html');
+		})
+	})
 
-		// 	);
-				// '<a href="#" class="bigImg">
-				// 	<img src="../img/maoyi1.jpg" alt="">
-				// 	<span class="active">明星同款</span>
-				// </a>
-				// <p class="clear">
-				// 	<a href="#" class="left">米浪米浪</a>
-				// 	<span class="_discount right">1.9折</span>
-				// </p>
-				// <p><a href="#">韩版纯棉三色拼接圆领套头毛衣针织</a></p>
-				// <p>
-				// 	<strong>￥68</strong>
-				// 	<span class="price">￥358</span>
-				// </p>
-				// <p class="smallPic">
-				// 	<a href="#"><img src="../img/maoyi1.1.jpg" alt=""></a>
-				// 	<a href="#"><img src="../img/maoyi1.2.jpg" alt=""></a>
-				// 	<a href="#"><img src="../img/maoyi1.3.jpg" alt=""></a>
-				// </p>';
+	//点击分页请求不同数据
+	$('.page span').on('click',function(){
+		$('.picList').empty();
+		$(this).addClass('active').siblings().removeClass('active');
+		var $self = $(this);
+		//console.log($self.html())
+		$.post('list.php',{page:$self.html()},function(response){
+			console.log(11)
+			var result = JSON.parse(response);
+			console.log(result);
+			$(result).each(function(idx,item){
+				//console.log(idx)
+				//console.log(item)
+				$('<li/>').addClass('data').html('<a href="#" class="bigImg"><img src="'+ item.bigImg +'" alt=""><span class="active">'+ item.redLine +'</span></a><p class="clear"><a href="#" class="left">'+ item.name +'</a><span class="_discount right">'+ item.discount +'</span></p><p><a href="#">'+ item.msg +'</a></p><p><strong>'+ item.price +'</strong><span class="price">'+ item.originPrice +'</span></p><p class="smallPic"></p>').appendTo($('.pic ul'));
+				//console.log(typeof (item.smallImg))
 
+				//判断redLine
+				console.log(item.redLine)
+				console.log(item.redLine.length)
+				if(item.redLine.length<=0){
+					$('.data .active').remove();
+				}
 
-			// $('<img src=" '+ item.bigImg + '"/>').appendTo('.bigPic');
-			// $('<p/>').appendTo('.bigImg');
-		// })
+				//小图
+				var arr = item.smallImg.split(',');
+				$(arr).each(function(i,item){
+					//console.log($('.smallPic').eq(idx));
+					$('<a href="#"></a>').html('<img src="'+ item +'" alt="">').appendTo($('.smallPic').eq(idx));
+				})
+			})
+		})
 	})
 })
 
@@ -125,10 +127,6 @@ $(function(){
 // 	$.post('list.php',{pageNo:40,sql:"select * from goodsdatalist limit (pageSize-1)*pageNo,pageNo"},function(response){
 // 		console.log(response);
 
-// 		$('</ul>').appenTo($body);
-// 		forEach(){
-// 			$('</li>')
-// 		}
 
 // 	})
 // })

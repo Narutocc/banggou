@@ -1,0 +1,76 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select { margin: 0; padding: 0; }
+
+em, i { font-style: normal; }
+
+li { list-style: none; }
+
+a { text-decoration: none; color: #999; }
+
+img { border: none; }
+
+table { border-collapse: collapse; }
+
+textarea { resize: none; overflow: hidden; }
+
+body { font-family: '微软雅黑'; font-size: 14px; color: #999; }
+
+.wrapper { width: 1200px; margin: 0 auto; }
+
+.clear { zoom: 1; }
+
+.clear::after { content: ''; display: block; clear: both; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+body { color: #333; font-size: 16px; font-family: '宋体'; }
+
+.register { margin: 0 auto; width: 980px; height: 600px; }
+
+.register .phone { border-bottom: 2px solid #6e6e6e; }
+
+.register .phone a { display: block; background: url(img/buttonSkin.png) no-repeat 0 -450px; width: 160px; height: 26px; line-height: 26px; text-align: center; color: #fff; }
+
+.register .message { border: 1px solid #ccc; margin-top: 10px; }
+
+.register .message .firstStep { margin: 22px 0 0 30px; width: 700px; }
+
+.register .message .firstStep p.title { border-bottom: 1px dotted #ccc; padding: 0 0 7px 20px; }
+
+.register .message .firstStep .details p { margin: 12px 8px 2px 8px; position: relative; }
+
+.register .message .firstStep .details p label { display: inline-block; width: 80px; text-align: right; color: #666; }
+
+.register .message .firstStep .details p input { width: 240px; height: 28px; line-height: 28px; border: 1px solid #ababab; background: url(img/iconSkin.png) repeat-x 0 -700px; }
+
+.register .message .firstStep .details p input.confirm { width: 120px; }
+
+.register .message .firstStep .details p span.tip { color: #999; display: inline-block; width: 310px; line-height: 20px; padding-left: 5px; }
+
+.register .message .firstStep .details p span.check { display: inline-block; background-color: #ccc; width: 110px; height: 30px; line-height: 30px; text-align: center; padding: 0; color: #000; font-size: 20px; letter-spacing: 12px; cursor: pointer; }
+
+.register .message .firstStep .details p span.change { position: absolute; left: 250px; color: #000; }
+
+.register .message .firstStep .details span { font-size: 12px; color: #f00; padding-left: 94px; display: none; }
+
+.register .message .firstStep .send { position: relative; }
+
+.register .message .firstStep .send span { position: absolute; display: block; background: url(img/buttons.png) 0 -85px; width: 215px; height: 35px; top: -40px; left: 90px; }
+
+.register .message .firstStep .send:hover span { background: url(img/buttons.png) 0 -127px; }
+
+.register .message .firstStep .send .again { position: absolute; left: 310px; top: -30px; font-size: 12px; }
+
+.register .message .firstStep .send .again em { color: #999; }
+
+.register .message .firstStep .send .again a { color: #222; border-bottom: 1px solid #222; }
+
+.register .message .firstStep .xieyi a { color: #222; border-bottom: 1px solid #222; font-size: 12px; margin-left: 85px; }
+
+.register .bottom { font-size: 12px; text-align: center; margin-top: 20px; }
+
+.register .bottom a { color: #333; }
+
+.register .bottom a:hover { border-bottom: 1px solid #333; }

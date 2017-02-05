@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>会员注册</title>
 	<link rel="stylesheet" href="../css/register.css">
+	<script src="../assert/jquery-3.1.1.js"></script>
+	<!-- <script src="../assert/jquery-validate/jquery.validate.js"></script>
+	<script src="../assert/jquery-validate/messages_zh.js"></script> -->
+	<script src="../js/register.js"></script>
 </head>
 <body>
 	<div class="register">
@@ -15,30 +19,48 @@
 		</div>
 		<div class="message clear">
 			<div class="firstStep left">
-				<p class="title">第一步：填写手机账户信息（以下内容均为必填）</p>
-				<div class="details">
-					<p>
+				<p class="title">填写账户信息（以下内容均为必填）</p>
+				<form class="details">
+					<p class="_username">
 						<label for="username">用户名：</label>
 						<input type="text" name="username" class="username">
 						<span class="tip">4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span>
 					</p>
-					<span>用户名不能为空</span>
-					<p>
-						<label for="username">手机号码：</label>
-						<input type="text" name="username" class="username">
+					<span class="tip1">用户名不能为空</span>
+					<p class="_phone">
+						<label for="telphone">手机号码：</label>
+						<input type="text" name="telphone" class="telphone">
 						<span class="tip">请输入您的手机号码。</span>
 					</p>
-					<span>手机号码不能为空</span>
+					<span class="tip2">手机号码不能为空</span>
+					<p class="_password">
+						<label for="password">登录密码：</label>
+						<input type="password" name="password" class="password">
+						<span class="tip">6-16个字符，请使用字母加数字或符号的组合密码。</span>
+					</p>
+					<span class="tip3">密码不能为空</span>
+					<p class="_confirm_psw">
+						<label for="confirm_psw">确认密码：</label>
+						<input type="password" name="confirm_psw" class="confirm_psw">
+						<span>请再次输入登录密码。</span>
+					</p>
+					<span class="tip4">确认密码不能为空</span>
 					<p>
-						<label for="username">验证码：</label>
-						<input type="text" name="username" class="confirm">
-						<span class="check">776k</span>
+						<label for="confirm">验证码：</label>
+						<input type="text" name="confirm" class="confirm">
+						<span class="check"></span>
 						<span class="change">换一张</span>
 					</p>
-					<span>验证码不能为空</span>
-				</div>
+					<span class="tip5">验证码不能为空</span>
+				</form><br><br><br>
 				<div class="send">
-					<span></span>
+					<a href="#" class="finish"><span></span></a>
+					<div class="again">
+						<em>手机未收到验证码，</em><a href="#">重新发送</a>
+					</div>
+				</div>
+				<div class="xieyi">
+					<a href="#">《邦购协议》</a>
 				</div>	
 			</div>
 			<div class="welcome right">

@@ -267,13 +267,17 @@ body { font-size: 12px; }
 
 .show .details .colorSize .sizes a:hover { border: 1px solid #f8584f; }
 
-.show .details .count { margin: 22px 0; }
+.show .details .count { margin: 22px 0; position: relative; }
 
 .show .details .count span { color: #222; }
 
 .show .details .count a { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border: 1px solid #dcdcdc; }
 
 .show .details .count input { width: 38px; height: 23px; border: 1px solid #dcdcdc; text-align: center; }
+
+.show .details .countAll { position: relative; }
+
+.show .details .countAll .countTip { display: none; width: 310px; height: 30px; line-height: 30px; background-color: #efefef; border: 1px solid #ccc; color: #222; padding-left: 4px; position: absolute; top: 35px; }
 
 .show .details .join a { display: block; width: 200px; height: 32px; line-height: 32px; text-align: center; color: #fff; background-color: #F8584F; border-radius: 2px; font-weight: bold; }
 

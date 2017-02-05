@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>会员登录</title>
 	<link rel="stylesheet" href="../css/login.css">
+	<script src="../assert/jquery-3.1.1.js"></script>
+	<script src="../js/login.js"></script>
 </head>
 <body>
 	<div class="register">
@@ -26,25 +28,25 @@
 							<label for="username">用户名：</label>
 							<input type="text" name="username" class="username">
 						</p>
-						<span>请输入账户或邮箱地址</span>
+						<span class="tip1">请输入账户或邮箱地址</span>
 						<p>
-							<label for="username">登录密码：</label>
-							<input type="text" name="username" class="username">
+							<label for="password">登录密码：</label>
+							<input type="password" name="password" class="password">
 						</p>
-						<span>请输入密码</span>
+						<span class="tip2"></span>
 						<p>
-							<label for="username">验证码：</label>
-							<input type="text" name="username" class="confirm">
+							<label for="confirm">验证码：</label>
+							<input type="text" name="confirm" class="confirm">
 							<span class="check">776k</span>
 							<span class="change">换一张</span>
 						</p>
-						<span>请输入验证码</span>
+						<span class="tip3"></span>
 						<div class="remember">
 							<input type="checkbox" checked="checked">记住用户名
 							<input type="checkbox">自动登录
 						</div>
 						<div class="logining">
-							<span></span>
+							<span class="success"></span>
 							<a href="#">找回密码？</a>
 						</div>
 					</div>

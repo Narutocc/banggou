@@ -15,6 +15,21 @@ $(function(){
 		function(){$introduce.hide()}
 	);
 
+	//点击加号++，点击减号--
+	var $value = $('input[name="number"]').val();
+	$('.minus').click(function(){
+		if($value < 1){
+			$('.countTip').show();
+			return false;
+		}else{
+			$('.countTip').hide();
+			$('input[name="number"]').val($value--);
+		}
+	})
+	$('.add').click(function(){
+		$('input[name="number"]').val($value++);
+	})
+
 	//放大镜
 	$('.bigImg').gdszoom();
 

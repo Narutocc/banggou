@@ -201,6 +201,7 @@ body{
 		}
 		.count{
 			margin:22px 0;
+			position:relative;
 			span{
 				color:#222;
 			}
@@ -219,6 +220,22 @@ body{
 				text-align:center;
 			}
 		}
+		.countAll{
+			position:relative;
+			.countTip{
+				display:none;
+				width:310px;
+				height:30px;
+				line-height:30px;
+				background-color:#efefef;
+				border:1px solid #ccc;
+				color:#222;
+				padding-left:4px;
+				position:absolute;
+				top:35px;
+			}
+		}
+		
 		.join{
 			a{
 				display:block;
