@@ -193,6 +193,8 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 
 .slideBar .top { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat -14px -1064px; display: block; width: 28px; height: 80px; position: fixed; right: 15px; top: 500px; display: none; }
 
+body { font-size: 12px; color: #222; }
+
 .step { border-bottom: 1px solid #ccc; height: 28px; }
 
 .step .steps { position: relative; }
@@ -211,7 +213,7 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 
 .cartTop .cartTitle li { float: left; color: #222; font-size: 12px; }
 
-.cartTop .cartTitle li input { margin: 12px; }
+.cartTop .cartTitle li input { margin: 12px; cursor: pointer; }
 
 .cartTop .cartTitle li.cartTitle01 { width: 126px; }
 
@@ -226,3 +228,63 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 .cartTop .cartTitle li.cartTitle06 { width: 155px; }
 
 .cartTop .cartTitle li.cartTitle07 { width: 74px; }
+
+.data { margin-top: 20px; }
+
+.data .cartTitle { background-color: #fdf6ee; height: 42px; line-height: 42px; border: 1px solid #ddd; }
+
+.data .cartTitle .logoName input { margin: 12px; }
+
+.data .cartTitle .send { margin-right: 40px; }
+
+.data .cartList { height: 105px; border: 1px solid #ddd; border-top: none; padding-top: 15px; }
+
+.data .cartList a { color: #222; }
+
+.data .cartList a:hover { border-bottom: 1px solid #222; }
+
+.data .cartList ul li { float: left; line-height: 20px; }
+
+.data .cartList ul li input { margin: 12px; cursor: pointer; }
+
+.data .cartList ul li.cart1 { width: 272px; position: relative; }
+
+.data .cartList ul li.cart1 > a:hover { border: 0; }
+
+.data .cartList ul li.cart1 .name { margin-left: 10px; display: inline-block; width: 144px; height: 90px; position: absolute; left: 90px; }
+
+.data .cartList ul li.cart2 { width: 190px; text-align: center; }
+
+.data .cartList ul li.cart3 { width: 200px; text-align: center; }
+
+.data .cartList ul li.cart3 .origin { color: #ccc; text-decoration: line-through; }
+
+.data .cartList ul li.cart4 { width: 220px; text-align: center; }
+
+.data .cartList ul li.cart4 a { display: inline-block; width: 18px; height: 25px; line-height: 25px; text-align: center; border: 1px solid #dcdcdc; background-color: #f0f0f0; }
+
+.data .cartList ul li.cart4 input { width: 50px; height: 25px; border: 1px solid #dcdcdc; text-align: center; margin: 0; }
+
+.data .cartList ul li.cart5 { width: 180px; text-align: center; margin-left: -20px; }
+
+.data .cartList ul li.cart5 span { color: #f8635b; font-weight: bold; }
+
+.cartFooter { margin-top: 30px; }
+
+.cartFooter .account { background-color: #f7f7f7; height: 60px; line-height: 60px; font-size: 14px; }
+
+.cartFooter .account p:not(:last-child) { margin: 0 10px; }
+
+.cartFooter .account .handle p { float: left; }
+
+.cartFooter .account .handle p input { margin-right: 12px; cursor: pointer; }
+
+.cartFooter .account .handle p a { color: #222; }
+
+.cartFooter .account .cost p { float: left; }
+
+.cartFooter .account .cost p .num { color: #f8635b; font-size: 20px; margin: 4px; }
+
+.cartFooter .account .cost p .total { color: #f8635b; font-size: 20px; }
+
+.cartFooter .account .cost p .sum { display: block; width: 144px; height: 60px; line-height: 60px; text-align: center; background-color: #f00; color: #fff; font-size: 24px; }
