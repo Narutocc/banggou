@@ -93,7 +93,7 @@ body{
 	}
 	.cartList{
 		//height:120px;
-		height:105px;
+		//height:105px;
 		border:1px solid #ddd;
 		border-top:none;
 		padding-top:15px;
@@ -133,6 +133,9 @@ body{
 				&.cart3{
 					width:200px;
 					text-align:center;
+					span::before{
+						content:'￥'
+					}
 					.origin{
 						color:#ccc;
 						text-decoration:line-through;
@@ -141,21 +144,24 @@ body{
 				&.cart4{
 					width:220px;
 					text-align:center;
-					a{
+					.minus,.add{
 						display:inline-block;
 						width:18px;
 						height:25px;
 						line-height:25px;
 						text-align:center;
 						border:1px solid #dcdcdc;
+						cursor:pointer;
 						background-color:#f0f0f0;
 					}
-					input{
+					.number{
+						display:inline-block;
 						width:50px;
 						height:25px;
+						line-height:25px;
 						border:1px solid #dcdcdc;
 						text-align:center;
-						margin:0;
+						cursor:pointer;
 					}
 				}	
 				&.cart5{
@@ -165,6 +171,9 @@ body{
 					span{
 						color:#f8635b;
 						font-weight:bold;
+						&::before{
+							content:'￥'
+						}
 					}
 				}			
 			}
@@ -202,9 +211,15 @@ body{
 					font-size:20px;
 					margin:4px;
 				}
+				.footPrice::before{
+					content:'￥';
+				}
 				.total{
 					color:#f8635b;
 					font-size:20px;
+					&::before{
+						content:'￥'
+					}
 				}
 				.sum{
 					display:block;

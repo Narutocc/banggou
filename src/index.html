@@ -7,6 +7,25 @@
 	<script src="assert/jquery-3.1.1.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/index.js"></script>
+	<script>
+		//保持登录状态在首页
+		$.post('php/usenameMasgse.php', function(res) {
+			var $obj = eval('(' + res + ')');
+			if($obj.state) {
+				// console.log(111)
+				$('.change').empty();
+				$('.change').html('欢迎您,' + $obj.clientName + '<a class="logoutA" href="">退出</a>').appendTo($('.firstMenu'));
+				console.log($('.change'))
+
+			}
+
+			$('.logoutA').on('click', function() {
+				$.post('php/logout.php', function(res) {
+					window.location.reload();
+				})
+			})
+		})
+	</script>
 </head>
 <body>
 	<!-- 头部导航 -->
@@ -15,14 +34,14 @@
 		<div class="wrapper clear">
 			<p class="left">欢迎来到邦购网，全场满199元包邮</p>
 			<ul class="firstMenu right">
-				<li class="fm"><a href="html/login.html">登录<i></i></a>
+				<li class="fm change"><a href="html/login.html">登录<i></i></a>
 					<ul class="secondMenu">
 						<li><a href="#">QQ账户登录</a></li>
 						<li><a href="#">支付宝登录</a></li>
 						<li><a href="#">微信账户登录</a></li>
 					</ul>
 				</li>
-				<li><a href="html/register1.html">注册</a></li>
+				<li><a href="html/register.html">注册</a></li>
 				<li class="fm"><a href="#">我的邦购<i class="my"></i></a><em></em>
 					<ul class="secondMenu">
 						<li><a href="#">我的订单</a></li>
@@ -96,7 +115,7 @@
 						<span>&gt;</span>
 					</div>
 					<ul class="content clear">
-						<li><a href="#">温暖毛衫</a></li>
+						<li><a href="html/list.html">温暖毛衫</a></li>
 						<li><a href="#">长款羽绒服</a></li>
 						<li><a href="#" class="active">17新品</a></li>
 						<li><a href="#">大衣</a></li>

@@ -16,18 +16,20 @@ $(function(){
 	);
 
 	//点击加号++，点击减号--
-	var $value = $('input[name="number"]').val();
+	var $value = $('.number').html();
 	$('.minus').click(function(){
-		if($value < 1){
+		if($value <= 1){
 			$('.countTip').show();
 			return false;
 		}else{
 			$('.countTip').hide();
-			$('input[name="number"]').val($value--);
+			$value--;
+			$('.number').html($value);
 		}
 	})
 	$('.add').click(function(){
-		$('input[name="number"]').val($value++);
+		$value++;
+		$('.number').html($value);
 	})
 
 	//放大镜
@@ -39,5 +41,111 @@ $(function(){
 		console.log($bigImg.attr('src'))
 		console.log($(this).attr('src'))
 		$bigImg.attr('src') = $(this).attr('src');
+	})
+
+	//购物车cookie
+	var $cartList = [];
+
+	var $cookies = document.cookie.split('; ');
+	$($cookies).each(function(idx,item){
+		var arr = item.split('=');
+		if(arr[0] === 'cartlist'){
+			$cartList = JSON.parse(arr[1]);
+
+			//保存加入购物车的数量
+			$('.shopping span').html($cartList.length);
+		}else{
+			$('.shopping span').html('0');
+		}
+	})
+
+	var $currentGUID;
+	var $color;
+	var $img;
+	$('.colors').on('click','a',function(){
+		$currentGUID = $(this).attr('data-guid');
+		$(this).addClass('active').siblings().removeClass('active');
+		$img = $(this).children();
+		//$('.colors a').siblings('a').remove('active');
+		console.log($currentGUID);
+		if($currentGUID == 'g01'){
+			$('.chooseColor').html('黑色');
+			$color = $('.chooseColor').html();
+		}else if($currentGUID == 'g02'){
+			$('.chooseColor').html('蓝色');
+			$color = $('.chooseColor').html();
+		}else if($currentGUID == 'g03'){
+			$('.chooseColor').html('天蓝色');
+			$color = $('.chooseColor').html();
+		}
+	})
+
+	var $size;
+	$('.sizes').on('click','a',function(){
+		$size = $(this).html();
+		$(this).addClass('active').siblings().removeClass('active');
+		//console.log($size);
+		$('.chooseSize').html(''+ $(this).html() +'');
+	})
+
+	$('.join .joinIn').click(function(){
+		$('.shopping span').html($cartList.length);
+		var $name = $('.name span');
+		var $origin = $('.price ul li em');
+		var $price = $('.price ul li strong');
+
+		if(!$size && !$currentGUID){
+			alert('加入购物袋前请先选择颜色和尺码');
+			return false;
+		}else if(!$currentGUID){
+			alert('加入购物袋前请先选择颜色');
+			return false;
+		}else if(!$size){
+			alert('加入购物袋前请先选择尺码');
+			return false;
+		}
+
+		var goodsObj = {};
+		goodsObj.guid = $currentGUID;
+		goodsObj.imgUrl = $img.attr('src');
+		goodsObj.name = $name.html();
+		goodsObj.origin = $origin.html();
+		goodsObj.price = $price.html();
+		goodsObj.qty = 1;
+		goodsObj.color = $color;
+		goodsObj.size = $size;
+
+		console.log(goodsObj)
+		var i = 0;
+		if($cartList.length === 0){
+			$cartList.push(goodsObj);
+		}else{
+			$($cartList).each(function(idx,item){
+				if(item.guid === $currentGUID){
+					item.qty++;
+					return false;
+				}
+				i = idx;
+			})
+			if(i === $cartList.length-1){
+				$cartList.push(goodsObj);
+			}
+		}
+
+		document.cookie = 'cartlist=' + JSON.stringify($cartList);
+
+		var $cookies = document.cookie.split('; ');
+		$($cookies).each(function(idx,item){
+			var arr = item.split('=');
+			if(arr[0] === 'cartlist'){
+				$cartList = JSON.parse(arr[1]);
+
+				//保存加入购物车的数量
+				$('.shopping span').html($cartList.length);
+			}else{
+				$('.shopping span').html('0');
+			}
+		})
+		//window.location.href = '../html/cart.html';
 	})
 })

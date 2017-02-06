@@ -113,6 +113,9 @@ $(function(){
 					//console.log($('.smallPic').eq(idx));
 					$('<a href="#"></a>').html('<img src="'+ item +'" alt="">').appendTo($('.smallPic').eq(idx));
 				})
+
+				//点击第一个毛衣图片的时候跳转到详情页
+				$('.data a').first().attr('href','detail.html');
 			})
 		})
 	})

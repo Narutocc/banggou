@@ -241,7 +241,11 @@ body { font-size: 12px; }
 
 .show .details .price ul li strong { color: #f8584f; font-size: 22px; margin: 0 35px 0 12px; }
 
+.show .details .price ul li strong::before { content: '￥'; }
+
 .show .details .price ul li em { text-decoration: line-through; color: #696969; }
+
+.show .details .price ul li em::before { content: '￥'; }
 
 .show .details .price ul li .zhekou { float: right; padding: 0px 10px; background-color: #f84646; color: #fff; }
 
@@ -259,6 +263,8 @@ body { font-size: 12px; }
 
 .show .details .colorSize .colors a { display: block; float: left; margin-right: 10px; border: 1px solid #c7c7c7; padding: 1px; width: 51px; height: 51px; }
 
+.show .details .colorSize .colors a.active { border: 1px solid #f00; }
+
 .show .details .colorSize .colors a:hover { border: 1px solid #f8584f; }
 
 .show .details .colorSize .colors a img { width: 51px; height: 51px; }
@@ -267,13 +273,15 @@ body { font-size: 12px; }
 
 .show .details .colorSize .sizes a:hover { border: 1px solid #f8584f; }
 
+.show .details .colorSize .sizes a.active { border: 1px solid #f00; }
+
 .show .details .count { margin: 22px 0; position: relative; }
 
 .show .details .count span { color: #222; }
 
-.show .details .count a { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border: 1px solid #dcdcdc; }
+.show .details .count .minus, .show .details .count .add { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border: 1px solid #dcdcdc; cursor: pointer; }
 
-.show .details .count input { width: 38px; height: 23px; border: 1px solid #dcdcdc; text-align: center; }
+.show .details .count .number { display: inline-block; width: 38px; height: 22px; line-height: 22px; border: 1px solid #dcdcdc; text-align: center; cursor: pointer; }
 
 .show .details .countAll { position: relative; }
 

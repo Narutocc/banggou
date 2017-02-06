@@ -123,10 +123,16 @@ body{
 						color:#f8584f;
 						font-size:22px;
 						margin:0 35px 0 12px;
+						&::before{
+							content:'￥'
+						}
 					}
 					em{
 						text-decoration: line-through;
 						color: #696969;
+						&::before{
+							content:'￥'
+						}
 					}
 					.zhekou{
 						float:right;
@@ -176,6 +182,9 @@ body{
 					padding:1px;
 					width:51px;
 					height:51px;
+					&.active{
+						border:1px solid #f00;
+					}
 					&:hover{
 						border:1px solid #f8584f;
 					}
@@ -196,6 +205,9 @@ body{
 					&:hover{
 						border:1px solid #f8584f;
 					}
+					&.active{
+						border:1px solid #f00;
+					}
 				}
 			}
 		}
@@ -205,19 +217,23 @@ body{
 			span{
 				color:#222;
 			}
-			a{
+			.minus,.add{
 				display:inline-block;
 				width:22px;
 				height:22px;
 				line-height:22px;
 				text-align:center;
 				border:1px solid #dcdcdc;
+				cursor:pointer;
 			}
-			input{
+			.number{
+				display:inline-block;
 				width:38px;
-				height:23px;
+				height:22px;
+				line-height:22px;
 				border:1px solid #dcdcdc;
 				text-align:center;
+				cursor:pointer;
 			}
 		}
 		.countAll{
