@@ -146,6 +146,6 @@ $(function(){
 				$('.shopping span').html('0');
 			}
 		})
-		//window.location.href = '../html/cart.html';
+		window.location.href = '../html/cart.html';
 	})
 })
