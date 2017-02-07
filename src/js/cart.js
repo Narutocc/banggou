@@ -59,19 +59,20 @@ $(function(){
 	})
 
 	//点击加号++，点击减号--
-	var $value = $('.number').html();
-	$('.minus').click(function(){
+	$('.cart4').on('click','.minus',function(){
+		var $value = $(this).siblings('.number').html();
 		if($value <= 1){
-			$('.countTip').show();
+			alert('对不起，数量至少为1件。')
 			return false;
 		}else{
 			$('.countTip').hide();
 			$value--;
-			$('.number').html($value);
+			$(this).siblings('.number').html($value);
 		}
 	})
-	$('.add').click(function(){
+	$('.cart4').on('click','.add',function(){
+		var $value = $(this).siblings('.number').html();
 		$value++;
-		$('.number').html($value);
+		$(this).siblings('.number').html($value);
 	})
 })
