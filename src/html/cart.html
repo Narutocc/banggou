@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>购物车</title>
 	<link rel="stylesheet" href="../css/cart.css">
-	<script src="../assert/jquery-3.1.1.js"></script>
-	<script src="../js/cart.js"></script>
+	<!-- <script src="../assert/jquery-3.1.1.js"></script> -->
+	<script src="../js/require.js" data-main="../js/cart.js"></script>
 </head>
 <body>
 	<!-- 头部导航 -->
@@ -114,7 +114,7 @@
 						<span class="add">+</span>
 					</li>
 					<li class="cart5">
-						<span>￥68</span>
+						<span>68</span>
 					</li>
 					<li class="cart6">
 						<a href="#">移入我的点赞</a><br>
@@ -128,14 +128,14 @@
 		<div class="wrapper">
 			<div class="account clear">
 				<div class="handle left clear">
-					<p><input type="checkbox">全选</p>
+					<p><input type="checkbox" checked="checked">全选</p>
 					<p><a href="#" class="delete">删除选中商品</a></p>
 					<p><a href="#">清除失效商品</a></p>
 				</div>
 				<div class="cost right clear">
-					<p>已选商品<span class="num">1</span>件</p>
+					<p>已选商品<span class="num">0</span>件</p>
 					<p>商品总价<span class="footPrice">68</span>-优惠￥0</p>
-					<p>合计：（不含运费）：<span class="total">68</span></p>
+					<p>合计：（不含运费）：<span class="total">0</span></p>
 					<p><a href="#" class="sum">去结算</a></p>
 				</div>
 			</div>
