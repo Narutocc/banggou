@@ -7,17 +7,23 @@ requirejs(['config'],function(){
 
 			var cartList;
 			var $cookies = document.cookie.split('; ');
+			console.log($cookies)
 			$($cookies).each(function(idx,item){
 				var arr = item.split('=');
-				if(arr[0] === 'cartlist'){
+				console.log(arr)
+				for(var j=0;j<arr.length;j++){
 					cartList = JSON.parse(arr[1]);
 				}
+				// if(arr[0] === 'cartlist'){
+				// 	cartList = JSON.parse(arr[1]);
+				// }
 			})
 
 			var subPrice = 0;
 			var singlePrice;
 
 			if(cartList){
+				console.log(11)
 				$(cartList).each(function(idx,item){
 					$('<ul/>').addClass('clear').html('<li><input type="checkbox" checked="checked"></li><li class="cart1 clear"><a href="#"><img src="'+ item.imgUrl +'" alt=""></a><div class="name right"><a>'+ item.name +'</a></div></li><li class="cart2"><p class="color">颜色：'+ item.color +'</p><p class="size">尺码：('+ item.size +')</p></li><li class="cart3"><span class="origin">'+ item.origin +'</span><br/><span class="price">'+ item.price +'</span></li><li class="cart4"><span class="minus">-</span><span class="number">'+ item.qty +'</span><span class="add">+</span></li><li class="cart5"><span>'+item.price+'</span></li><li class="cart6"><a href="#">移入我的点赞</a><br><a href="javascript:;" class="del">删除</a></li>').appendTo($cartList);
 
