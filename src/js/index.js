@@ -20,13 +20,13 @@ requirejs(['config'],function(){
 		})
 		$(function(){
 			// 所有图片改变透明度
-			$('img').css('opacity','1')
+			$('img').css('opacity',1)
 				.hover(
 					function(){
-						$(this).animate({opacity:0.8},500);
+						$(this).stop().animate({opacity:0.8},500);
 					},
 					function(){
-						$(this).animate({opacity:1},500);
+						$(this).stop().animate({opacity:1},500);
 					}
 				);
 
@@ -34,10 +34,10 @@ requirejs(['config'],function(){
 			$('a').css('opacity','1')
 				.hover(
 					function(){
-						$(this).animate({opacity:0.8},500);
+						$(this).stop().animate({opacity:0.8},500);
 					},
 					function(){
-						$(this).animate({opacity:1},500);
+						$(this).stop().animate({opacity:1},500);
 					}
 				);
 
@@ -45,16 +45,17 @@ requirejs(['config'],function(){
 			$('.datalist .title h4').css('opacity','1')
 				.hover(
 					function(){
-						$(this).animate({opacity:0.8},500);
+						$(this).stop().animate({opacity:0.8},500);
 					},
 					function(){
-						$(this).animate({opacity:1},500);
+						$(this).stop().animate({opacity:1},500);
 					}
 				);
 
 
-			//轮播效果插件
+			//轮播效果
 			//$('.banner').feicarousel();
+			var $banner = $('.banner');
 			var $bigImg = $('.bigImg');
 			var $bigLi = $bigImg.children();
 			var len = $bigLi.length;
@@ -67,28 +68,37 @@ requirejs(['config'],function(){
 			//自动轮播+鼠标移入移出
 			$bigImg.on('mouseenter',function(){
 				clearInterval($bigImg.timer);
-				//$(this).animate({opacity:0.8},500);
-
+				$(this).animate({opacity:0.8},500);
 			}).on('mouseleave',function(){
+				$(this).animate({opacity:1},500);
 				$bigImg.timer = setInterval(function(){
 					index++;
 					showPic();
-					//$(this).animate({opacity:1},500);
 				},2000);
 			}).trigger('mouseleave');
 
-			//左右按钮，bug，本来应该先隐藏
+			$banner.on('mouseenter',function(){
+				$btn.show();
+			})
+
+			$banner.on('mouseleave',function(){
+				$btn.hide();
+			})
+
 			$btnPrev.on('click',function(){
+				clearInterval($bigImg.timer);
 				index--;
 				showPic();
 			});
 			$btnNext.on('click',function(){
+				clearInterval($bigImg.timer);
 				index++;
 				showPic();
 			})
 
 			//点击底部切换
 			$bottom.on('click','li',function(){
+				clearInterval($bigImg.timer);
 				index = $(this).index();
 				showPic();
 			});
@@ -121,10 +131,10 @@ requirejs(['config'],function(){
 
 
 
-			//男生馆tab标签切换，li切换有问题
+			//男生馆tab标签切换
 			var $lis = $('.datalist .title_right li');
 			$lis.on('click',function(){
-				$lis.eq($(this).index()).addClass('active').siblings().removeClass('active');
+				$(this).addClass('active').siblings().removeClass('active');
 				$('.pitures').eq($lis.index(this)).addClass('on').siblings().removeClass('on');
 			})
 

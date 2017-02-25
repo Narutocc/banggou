@@ -13,7 +13,7 @@ $mainColor:#d51819;
 		padding:4px;
 		position:relative;
 		.btn{
-			//display:none;
+			display:none;
 			.btnPrev,.btnNext{
 				position:absolute;
 				left:14px;
@@ -27,6 +27,7 @@ $mainColor:#d51819;
 				color:#fff;
 				font-size:24px;
 				cursor:pointer;
+				z-index:999;
 			}
 			.btnNext{
 				left:auto;

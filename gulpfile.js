@@ -37,11 +37,12 @@ gulp.task('server',function(){
 		// port:4000,
 
 		// 代理
-		proxy:'http://localhost/',
+		proxy:'http://localhost',
 
 		// 监听html文件
 		files:['./src/*.html','./src/html/*.html'],
 	});
 
 	gulp.watch('src/sass/*.scss',['buildSass']);
+	gulp.watch('./src/*.php').on('change',browserSync.reload);
 })

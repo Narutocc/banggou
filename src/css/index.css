@@ -195,7 +195,9 @@ header .shopping em { background: url(img/Veo_mbshop_spirit_pic.png) no-repeat 0
 
 .container .banner { padding: 4px; position: relative; }
 
-.container .banner .btn .btnPrev, .container .banner .btn .btnNext { position: absolute; left: 14px; top: 250px; margin-top: -30px; width: 30px; height: 60px; line-height: 60px; text-align: center; background-color: rgba(0, 0, 0, 0.3); color: #fff; font-size: 24px; cursor: pointer; }
+.container .banner .btn { display: none; }
+
+.container .banner .btn .btnPrev, .container .banner .btn .btnNext { position: absolute; left: 14px; top: 250px; margin-top: -30px; width: 30px; height: 60px; line-height: 60px; text-align: center; background-color: rgba(0, 0, 0, 0.3); color: #fff; font-size: 24px; cursor: pointer; z-index: 999; }
 
 .container .banner .btn .btnNext { left: auto; right: 14px; }
 

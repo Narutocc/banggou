@@ -111,6 +111,7 @@ requirejs(['config'],function(){
 
 				var goodsObj = {};
 				goodsObj.guid = $currentGUID;
+				console.log(goodsObj.guid)
 				goodsObj.imgUrl = $img.attr('src');
 				goodsObj.name = $name;
 				goodsObj.origin = $origin;
@@ -150,7 +151,7 @@ requirejs(['config'],function(){
 						$('.shopping span').html('0');
 					}
 				})
-				window.location.href = '../html/cart.html';
+				window.location.href = '#';
 			})
 		})
 	})

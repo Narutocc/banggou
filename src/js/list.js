@@ -6,10 +6,21 @@ requirejs(['config'],function(){
 		$(function(){
 			//商品分类，鼠标移进事件,显示一二级菜单（鼠标移出有bug）
 			$('.select .selectes').mouseenter(function(){
-				$('.select_all').fadeIn(500);
+				$('.select_all').show();
 			})
+			$('.select .selectes').mouseleave(function(){
+				$('.select_all').hide();
+				// setTimeout(function(){
+				// 	$('.select_all').hide();
+				// },1000)
+			})
+
+			$('.select_all').mouseenter(function(){
+				$('.select_all').show();
+			})
+
 			$('.select_all').mouseleave(function(){
-				$('.select_all').fadeOut(400);
+				$('.select_all').hide();
 			})
 
 			//点击“分类”的二三级菜单,第三级菜单不显示，更改图标未做
@@ -37,10 +48,10 @@ requirejs(['config'],function(){
 				if($morePinpai.is(':visible')){
 					$morePinpai.fadeOut();
 					$more.html('更多');
-					$more1.show();
+					// $more1.show();
 				}else{
 					$morePinpai.fadeIn();
-					$more.html('收起').children('em');
+					$more.html('收起');
 					$more2.show();
 				}
 			})
